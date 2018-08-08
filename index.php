@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="">
     <meta name="title" content="Ivan Koop / Full Stack Developer" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/favicon-apple.png">
 	  <meta name="description" content="Full Stack developer from Asunción / Paraguay" />
 		<meta name="keywords" content="Developer, full-stack, ios-developer, android-developer, android, ios, backend-developer, Paraguay, Asunción" />
     <title>Ivan Koop / Full Stack Developer</title>
