@@ -5,22 +5,20 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Ivan Koop / Developer</title>
+    <meta name="title" content="Ivan Koop / Full Stack Developer" />
+	  <meta name="description" content="Full Stack developer from Asunción / Paraguay" />
+		<meta name="keywords" content="Developer, full-stack, ios-developer, android-developer, android, ios, backend-developer, Paraguay, Asunción" />
+    <title>Ivan Koop / Full Stack Developer</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
   </head>
@@ -160,27 +158,6 @@
                   Led the development of an android app using java.
                 </li>
               </ul>
-              <!--<p>
-                At this company I was hired for one specific project, it was a native android application called WakeApp.
-                The app was a success in my country and was published in many local newspapers:
-              </p>
-              <ul>
-                <li>
-                  <a href="http://www.hoy.com.py/tecnologia/paraguayos-lanzan-app-para-dormir-en-los-buses-y-no-pasar-la-parada" target="_blank">HOY News</a>
-                </li>
-                <li>
-                  <a href="http://www.abc.com.py/edicion-impresa/economia/una-aplicacion-para-usuarios-del-transporte-1525258.html" target="_blank">ABC News</a>
-                </li>
-                <li>
-                  <a href="http://www.ultimahora.com/crean-app-dormir-el-bus-pasarse-la-parada-n1029117.html" target="_blank">Ultima Hora News</a>
-                </li>
-                <li>
-                  <a href="http://www.nanduti.com.py/2016/10/05/dormi-tranquilo-bus-despertate-wake-app/" target="_blank">Radio Station Ñanduti</a>
-                </li>
-                <li>
-                  <a href="http://www.cronica.com.py/2016/10/06/ya-no-vas-pasar-parada/" target="_blank">Cronica News</a>
-                </li>
-              </ul>-->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">March 2016 - May 2016 </span>
@@ -199,20 +176,6 @@
                     Small 2d html5 video games using phaserjs.
                   </li>
                 </ul>
-              <!--<p>This was like my mid crisis developer experience, I was like "Holy %&!$, software development is not a joke"
-                It started to be a passion for me and I started to read blogs and learn a lot in my free time.
-                Learned how to use git,Sql databases, backend services with php, etc. At this moment I started my first personal project
-                that was for my parents' company, it was a management software for a Car mechanical company, I've done that project using
-                php with mysql as backend and jquery with ajax requests for the frontend. I've made some timelapse videos of the development:
-              </p>
-              <ul>
-                <li>
-                  <a href="https://www.youtube.com/watch?v=Y_9SwDFd_9Y" target="_blank">Programming Motivation VIDEO</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/watch?v=kiT33CceQzY" target="_blank">Speed Coding Jquery with PHP</a>
-                </li>
-              </ul>-->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Oct 2015 - Mar 2016</span>
@@ -227,11 +190,6 @@
                 <li>Web development of small landing sites using php & mysql.</li>
                 <li>Mobile development of an hybrid app using sencha touch.</li>
               </ul>
-              <!--<p>
-                This was my first job as a developer, Here I worked with small websites doing basic html/css and jquery.
-                I had a tutor that taught me all the basics of web development.
-                Also, I started working with Mobile Development with a tool called Sencha Touch that worked with cordova for exporting to iOS & Android.
-              </p>-->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Feb 2015 - Oct 2015</span>
@@ -433,8 +391,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
 
   </body>
