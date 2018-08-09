@@ -70,7 +70,7 @@
             <span class="text-primary">Koop</span>
           </h1>
           <div class="subheading mb-5">Asunción · Paraguay · (+595) 981-820-920 ·
-            <a href="mailto:name@email.com">ivankoop3@gmail.com</a>
+            <a href="mailto:ivankoop3@gmail.com">ivankoop3@gmail.com</a>
           </div>
           <p class="mb-5">Passionate self-taught developer, 23 years old.
           <br>
