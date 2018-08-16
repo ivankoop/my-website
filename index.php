@@ -23,7 +23,7 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <link href="css/resume.min.css" rel="stylesheet">
 
-    
+
 
   </head>
 
@@ -70,12 +70,12 @@
             <span class="text-primary">Koop</span>
           </h1>
           <div class="subheading mb-5">Asunción · Paraguay · (+595) 981-820-920 ·
-            <a href="mailto:ivankoop3@gmail.com">ivankoop3@gmail.com</a>
+            <a href="mailto:ivan@vikm.co">ivan@vikm.co</a>
           </div>
           <p class="mb-5">Passionate self-taught developer, 23 years old.
           <br>
            Experienced with a wide range of frontend & backend technologies,<br> specialized on native ios and android development.</p>
-          
+
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
               <a href="https://www.facebook.com/vikoopm" target="_blank">
@@ -136,7 +136,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Full Stack & Mobile Developer</h3>
               <div class="subheading mb-3">Teixidó & Co</div>
-              <ul>    
+              <ul>
                 <li>
                   Led the development and adoption of React for a big News website.
                 </li>
