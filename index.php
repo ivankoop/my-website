@@ -94,6 +94,14 @@
               </a>
             </li>
             <li class="list-inline-item">
+              <a href="https://www.youtube.com/channel/UCsBB_oVwA-HvOs2D8W3xU_A" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/ivankoop/" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -109,6 +117,7 @@
                 </span>
               </a>
             </li>
+            
           </ul>
         </div>
       </section>
