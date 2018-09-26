@@ -130,11 +130,11 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Full Stack & Mobile Developer Contractor</h3>
               <div class="subheading mb-3">Independent Contractor</div>
-              <ul>
+              <!--<ul>
                 <li>
-                  Co-founder & Creator of a startup app for travel agencies. (working on part time)
+
                 </li>
-              </ul>
+            </ul>-->
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">July 2018 - Present</span>
