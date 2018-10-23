@@ -395,7 +395,7 @@
             <li>
               <a href="uploads/GGJCertificado_ivan_koop.png" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                Global Game Jam 2018 - Certification
+                Global Game Jam 2018 - IGDA Certification
               </a>
             </li>
           </ul>
