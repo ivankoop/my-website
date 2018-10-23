@@ -350,6 +350,12 @@
         <div class="my-auto">
           <h2 class="mb-5">Awards &amp; Certifications</h2>
           <ul class="fa-ul mb-0">
+              <li>
+                <a href="https://courses.edx.org/certificates/c032836401624fb8bb961ddc2bbb3c0a" target="_blank">
+                  <i class="fa-li fa fa-certificate text-warning"></i>
+                  React Router and Redux - Microsoft Certification
+                </a>
+              </li>
             <li>
               <a href="https://courses.edx.org/certificates/942095c1a18b413fa30cfa273a5d0657" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
