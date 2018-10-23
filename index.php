@@ -371,25 +371,25 @@
             <li>
               <a href="https://www.testdome.com/cert/aek2kr6z2e" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                HTML/CSS, JS and SQL - Certification
+                HTML/CSS, JS and SQL - TestDome Certification
               </a>
             </li>
             <li>
               <a href="https://www.testdome.com/cert/56ttdj7sjj" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                Javascript top 10% Score - Certification
+                Javascript top 10% Score - TestDome Certification
               </a>
             </li>
             <li>
               <a href="https://www.testdome.com/cert/zswuzeb1xc" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                PHP - Certification
+                PHP - TestDome Certification
               </a>
             </li>
             <li>
               <a href="https://www.testdome.com/cert/unskv5sxcw" target="_blank">
                 <i class="fa-li fa fa-certificate text-warning"></i>
-                Java - Certification
+                Java - TestDome Certification
               </a>
             </li>
             <li>
