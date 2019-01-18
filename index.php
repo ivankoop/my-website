@@ -130,11 +130,18 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Full Stack & Mobile Developer Contractor</h3>
               <div class="subheading mb-3">Independent Contractor</div>
-              <!--<ul>
+              <h5>Clients</h5>
+              <ul>
                 <li>
-
+                    Click SA (MUV)
                 </li>
-            </ul>-->
+                <li>
+                    Finantech SA
+                </li>
+                <li>
+                  Grupo Tobiano SRL
+                </li>
+              </ul>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">July 2018 - Present</span>
@@ -325,7 +332,7 @@
             </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              English / speak (not fluent) - read - write
+              English / speak - read - write
             </li>
           </ul>
         </div>
