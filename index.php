@@ -128,6 +128,16 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Engineer</h3>
+              <div class="subheading mb-3">MUV</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Feb 2019 - present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
               <h3 class="mb-0">Full Stack & Mobile Developer Contractor</h3>
               <div class="subheading mb-3">Independent Contractor</div>
               <h5>Clients</h5>
