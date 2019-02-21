@@ -132,7 +132,7 @@
               <div class="subheading mb-3">MUV</div>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Feb 2019 - present</span>
+              <span class="text-primary">February 2019 - Present</span>
             </div>
           </div>
 
@@ -154,7 +154,7 @@
               </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">July 2018 - Present</span>
+              <span class="text-primary">July 2018 - February 2019</span>
             </div>
           </div>
 
