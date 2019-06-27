@@ -72,7 +72,7 @@
           <div class="subheading mb-5">Asunción · Paraguay · (+595) 981-820-920 ·
             <a href="mailto:ivankoop3@gmail.com">ivankoop3@gmail.com</a>
           </div>
-          <p class="mb-5">Passionate self-taught developer, 23 years old.
+          <p class="mb-5">Passionate self-taught developer, 24 years old.
           <br>
            Experienced with a wide range of frontend & backend technologies,<br> specialized on native ios and android development.</p>
 
