@@ -130,6 +130,8 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Software Engineer</h3>
               <div class="subheading mb-3">MUV</div>
+              <p>Leading the frontend development of all the management software in the company. <br>Designing frontend architecture and foundation core. <br>Introducing (unit,integration) tests and continous integration.
+<br>Working with some backend microservices using nodejs, mongodb and apache kafka.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Feb 2019 - Present</span>
