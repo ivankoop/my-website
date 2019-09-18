@@ -1,0 +1,8 @@
+[Fri Jan 18 19:01:24.398887 2019] [proxy:error] [pid 346] (61)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9070 (*) failed
+[Fri Jan 18 19:01:24.399376 2019] [proxy_fcgi:error] [pid 346] [client 127.0.0.1:53926] AH01079: failed to make connection to backend: 127.0.0.1
+[Fri Jan 18 19:01:35.926447 2019] [proxy:error] [pid 644] (61)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9070 (*) failed
+[Fri Jan 18 19:01:35.926693 2019] [proxy_fcgi:error] [pid 644] [client 127.0.0.1:53996] AH01079: failed to make connection to backend: 127.0.0.1
+[Fri Jan 18 19:01:37.102390 2019] [proxy:error] [pid 760] (61)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9070 (*) failed
+[Fri Jan 18 19:01:37.102621 2019] [proxy_fcgi:error] [pid 760] [client 127.0.0.1:53997] AH01079: failed to make connection to backend: 127.0.0.1
+[Fri Jan 18 19:01:37.313012 2019] [proxy:error] [pid 347] (61)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9070 (*) failed
+[Fri Jan 18 19:01:37.313230 2019] [proxy_fcgi:error] [pid 347] [client 127.0.0.1:54003] AH01079: failed to make connection to backend: 127.0.0.1
