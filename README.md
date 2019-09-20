@@ -6,8 +6,21 @@
 
 My personal website, just static
 
-<p >
-  Powered by GatsbyJs  <a href="https://gatsbyjs.org">
+## Core Technologies
+- Netlify <a href="https://www.netlify.com">
+    <img alt="Gatsby" src="https://www.netlify.com/img/press/logos/logomark.png" width="20" />
+  </a>
+- Reactjs <a href="https://reactjs.org/">
+    <img alt="Gatsby" src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg" width="20" />
+  </a>
+
+## Framework & Libraries
+- Gatsbyjs <a href="https://gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="20" />
   </a>
-</p>
+- Sass <a href="https://sass-lang.com">
+    <img alt="Gatsby" src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" width="20" />
+  </a>
+
+
+
