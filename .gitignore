@@ -1,3 +1,10 @@
+# Project dependencies
+.cache
 node_modules
-personal-website.local-local_log
-personal-website.local-error_log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build directory
+/public
+.DS_Store
