@@ -25,7 +25,7 @@ const IndexPage = () => (
             Passionate self-taught developer, 24 years old.
             <br />
             Experienced with a wide range of frontend & backend technologies,
-            <br /> specialized on native ios and android development.
+            <br /> specialized on Frontend development.
           </p>
           <div className="social-icons">
             {config.socialLinks.map(social => {
