@@ -312,10 +312,10 @@ const IndexPage = () => (
 
       <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="awards"
+        id="certs"
       >
         <div className="w-100">
-          <h2 className="mb-5">Awards &amp; Certifications</h2>
+          <h2 className="mb-5">Certifications</h2>
           <ul className="fa-ul mb-0">
             <li>
               <a
