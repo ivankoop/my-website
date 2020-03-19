@@ -22,7 +22,7 @@ const IndexPage = () => (
             <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead mb-5">
-            Passionate self-taught developer, 24 years old.
+            Passionate self-taught developer, 25 years old.
             <br />
             Experienced with a wide range of frontend & backend technologies,
             <br /> specialized on Frontend development.
