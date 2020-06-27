@@ -1,6 +1,6 @@
 import firebase from '../../lib/firebase';
 
-export default (req, res) => {
+export default function experiences(req, res) {
   firebase
     .collection('work-experience')
     .get()

@@ -5,7 +5,6 @@ import Layout from '../components/layout/layout';
 import { ExperiencesApi } from '../client/client';
 
 function Home({ experiences }) {
-  console.log('experiences', experiences);
   return (
     <Layout>
       <Header />
@@ -15,15 +14,10 @@ function Home({ experiences }) {
   );
 }
 
-export async function getStaticProps() {
+Home.getInitialProps = async () => {
   const response = await ExperiencesApi.getExperiences();
   const experiences = response.data?.experiences;
-
-  return {
-    props: {
-      experiences,
-    },
-  };
+  return {experiences}
 }
 
 export default Home;
