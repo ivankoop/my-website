@@ -1,5 +1,10 @@
 import styles from "./sidebar.module.css";
-import Contributions from "../contributions/contributions"
+import Contributions from "./contributions/contributions"
+import Certifications from "./certifications/certifications"
+import Divider from "../shared/divider"
+
+const linkedinUrl = "https://www.linkedin.com/in/ivankoop/"
+const githubUrl = "https://github.com/ivankoop"
 
 export default function SideBar() {
   return (
@@ -7,21 +12,23 @@ export default function SideBar() {
       <h1>Ivan Koop</h1>
       <h2>Software Developer</h2>
       <div className={styles.iconsRow}>
-        <div className={styles.iconCont}>
+        <a href={linkedinUrl} target="_blank" className={styles.iconCont}>
           <i className="icon">&#xf30c;</i>
-        </div>
-        <div className={styles.iconCont}>
+        </a>
+        <a href={githubUrl} target="_blank" className={styles.iconCont}>
           <i className="icon">&#xf113;</i>
-        </div>
+        </a>
       </div>
-      <div className={styles.divider}></div>
+      <Divider/>
       <p className={styles.description}>
         Passionate self-taught developer, 25 years old. Experienced with a wide
         range of frontend & backend technologies, specialized on Frontend
         development.
       </p>
-      <div className={styles.divider}></div>
+      <Divider/>
       <Contributions/>
+      <Divider/>
+      <Certifications/>
     </div>
   );
 }

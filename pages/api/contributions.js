@@ -1,9 +1,7 @@
 const axios = require("axios");
 
-const githubApiUrl = "https://api.github.com";
-
 const getRepo = (repoUrl) => {
-  return axios.get(`${githubApiUrl}/repos/${repoUrl}`, {
+  return axios.get(`${process.env.GITHUB_BASE_URL}/repos/${repoUrl}`, {
     headers: {
       authorization: `token ${process.env.GITHUB_API_KEY}`
     }
@@ -16,15 +14,19 @@ export default async function contributions(req, res) {
     getRepo("ivankoop/quiniela-mail-scraper"),
     getRepo("ivankoop/Mosquito-Attack-Game"),
     getRepo("ivankoop/ee4_elastic_search"),
-    getRepo("ivankoop/asu-traffic-miner")
   ]);
 
   const contributions = repos.map((repo) => {
     return {
       name: repo.data.name,
+      description: repo.data.description,
       stars: repo.data.stargazers_count,
+      url: repo.data.html_url
     };
   });
+
+  console.log("repos", repos)
+
 
   console.log("POLITO", contributions)
 
