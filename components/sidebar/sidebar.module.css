@@ -1,6 +1,6 @@
 .sidebarRoot {
     flex: 0.8;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 
@@ -61,10 +61,16 @@
     color: #52648e;
     text-align: right;
     font-size: 0.8rem;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    
 }
 
+.copyRight {
+    margin: 0;
+    font-size: 0.6em;
+    text-align: center;
+    color: #52648e;
+    margin-top: 10px;
+}
 
 
 @media (max-width: 768px) {
