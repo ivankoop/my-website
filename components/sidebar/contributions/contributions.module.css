@@ -1,0 +1,45 @@
+.contributionsRoot {
+    margin-top: 10px;
+}
+
+.contributionsRoot h2 {
+    font-size: 1rem;
+    margin: 0;
+    text-align: right;
+    color: #0083ff;
+    margin-right: 4px;
+}
+
+.contributionCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+   
+    margin-bottom: 5px;
+}
+
+.contributionsRoot i {
+    color: #2d4379;
+    margin: 0;
+}
+
+
+.contributionTextCont {
+    text-align: right;
+}
+
+.contributionTextCont a {
+    color: #2d4379;
+    font-size: 0.8em;
+    margin: 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contributionTextCont p {
+    color: #2d4379;
+    font-size: 0.6em;
+    margin: 0;
+    padding: 0;
+}
