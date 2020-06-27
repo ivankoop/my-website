@@ -25,7 +25,7 @@ const certifications = [
 export default function Certifications() {
   return (
     <div className={styles.certificationsCont}>
-      <h2>Certifications</h2>
+      <h2 className={styles.title}>Certifications</h2>
       <div className={styles.certificationsRow}>
         {certifications.map((certification, index) => (
           <div key={`certification-${index}`}>
@@ -38,7 +38,7 @@ export default function Certifications() {
               backgroundColor="white"
               borderColor="#52648e"
             >
-              <p>{certification.name}</p>
+              <p className={styles.text}>{certification.name}</p>
             </ReactTooltip>
             <a
               href={certification.url}

@@ -2,10 +2,11 @@
     margin-top: 10px;
 }
 
-.certificationsCont h2 {
+.certificationsCont .title {
     margin-top: 10px;
     color: #0083ff;
     font-size: 1rem;
+    text-align: right;
 }
 
 .certificationsRow {
@@ -21,7 +22,7 @@
     height: 60px;
 }
 
-.certificationsRow p {
+.certificationsRow .text {
     color :#52648e;
     font-size: 0.8em;
     margin: 0;

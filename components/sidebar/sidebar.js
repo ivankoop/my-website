@@ -9,8 +9,8 @@ const githubUrl = "https://github.com/ivankoop"
 export default function SideBar() {
   return (
     <div className={styles.sidebarRoot}>
-      <h1>Ivan Koop</h1>
-      <h2>Software Developer</h2>
+      <h1 className={styles.title}>Ivan Koop</h1>
+      <h2 className={styles.subtitle}>Software Developer</h2>
       <div className={styles.iconsRow}>
         <a href={linkedinUrl} target="_blank" className={styles.iconCont}>
           <i className="icon">&#xf30c;</i>

@@ -31,7 +31,7 @@ export function Contributions() {
     <div className={styles.contributionsRoot}>
       {!_.isEmpty(contributions) && (
         <>
-          <h2>Open Source Contributions</h2>
+          <h2 className={styles.title}>Open Source Contributions</h2>
           {contributions.map((contribution, index) => {
             return (
               <div key={`contribution-${index}`} className={styles.contributionCont}>

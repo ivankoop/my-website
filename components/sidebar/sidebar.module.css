@@ -4,7 +4,7 @@
 }
 
 
-.sidebarRoot h1 {
+.sidebarRoot .title {
     font-size: 2.25rem;
     text-align: right;
     margin: 0;
@@ -12,7 +12,7 @@
     height: 60px;
 }
 
-.sidebarRoot h2 {
+.sidebarRoot .subtitle {
     font-size: 1rem;
     margin: 0;
     text-align: right;
@@ -57,7 +57,7 @@
 }
 
 
-.sidebarRoot p {
+.sidebarRoot .description {
     color: #52648e;
     text-align: right;
     font-size: 0.8rem;
