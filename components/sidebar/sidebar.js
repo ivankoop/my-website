@@ -29,6 +29,7 @@ export default function SideBar() {
       <Contributions/>
       <Divider/>
       <Certifications/>
+      <div className={styles.sideBarDivider}></div>
       <div className={styles.copyRight}>Created with ❤️ by <strong>Ivan Koop</strong>, Powered by <strong>NextJs</strong></div>
     </div>
   );

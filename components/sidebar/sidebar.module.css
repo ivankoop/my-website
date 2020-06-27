@@ -1,6 +1,7 @@
 .sidebarRoot {
     flex: 0.8;
     padding: 1.5rem;
+    position: relative;
 }
 
 
@@ -70,11 +71,31 @@
     text-align: center;
     color: #52648e;
     margin-top: 10px;
+    position: fixed;
+    bottom: 5px;
+    left: 10%;
+}
+
+.sideBarDivider {
+    position: absolute;
+    height: 657px;
+    width: 2px;
+    right: 0;
+    top: 40px;
+    background-color: rgba(212, 220, 241, 0.4);
+    border-radius: 40px;
 }
 
 
 @media (max-width: 768px) {
     .sidebarRoot {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1280px) {
+    .copyRight {
         display: none;
     }
 }

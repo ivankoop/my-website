@@ -1,7 +1,18 @@
 import axios from "axios";
+import getConfig from 'next/config'
 
-export default class ContributionsApi {
-    static getContributions(apiBaseURL) {
-        return axios.get(`${apiBaseURL}api/contributions`)
+const {publicRuntimeConfig} = getConfig()
+const {WEBSITE_BASE_URL} = publicRuntimeConfig
+
+export class ContributionsApi {
+    static getContributions() {
+        console.log("acaa", process.env)
+        return axios.get(`${WEBSITE_BASE_URL}api/contributions`)
+    }
+}
+
+export class ExperiencesApi {
+    static getExperiences() {
+        return axios.get(`${WEBSITE_BASE_URL}api/experiences`)
     }
 }

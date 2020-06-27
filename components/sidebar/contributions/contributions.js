@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './contributions.module.css';
-import getBaseUrl from '../../../utils/baseUrlUtils';
-import ContributionsApi from '../../../client/client';
+import {ContributionsApi} from '../../../client/client';
 import { BulletList } from 'react-content-loader';
 import _ from 'lodash';
 
@@ -16,7 +15,7 @@ export function Contributions() {
   const loadContributions = async () => {
     try {
       setLoading(true);
-      const response = await ContributionsApi.getContributions(getBaseUrl());
+      const response = await ContributionsApi.getContributions();
       setContributions(response?.data?.contributions);
     } catch (e) {
       console.info('ERROR', e);

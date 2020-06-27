@@ -1,3 +1,6 @@
-.root {
+.contentRoot {
     flex: 2;
+    padding: 1.5rem;
+    position: relative;
 }
+

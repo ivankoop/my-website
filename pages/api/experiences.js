@@ -1,0 +1,18 @@
+import firebase from '../../lib/firebase';
+
+export default (req, res) => {
+  firebase
+    .collection('work-experience')
+    .get()
+    .then((snapshot) => {
+      const experiences = [];
+      snapshot.forEach((doc) => {
+        experiences.push(doc.data());
+      });
+      res.json({ experiences });
+    })
+    .catch((error) => {
+      console.info(error);
+      res.json({ error });
+    });
+};

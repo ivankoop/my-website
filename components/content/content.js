@@ -1,5 +1,9 @@
-import styles from "./content.module.css";
+import styles from './content.module.css';
 
-export default function Content() {
-  return <div className={styles.root}>content</div>;
+export default function Content(props) {
+  return (
+    <div className={styles.contentRoot}>
+      
+    </div>
+  );
 }

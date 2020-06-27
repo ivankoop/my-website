@@ -5,6 +5,7 @@ export const siteTitle = "Ivan Koop / Full Stack Developer";
 export default function Header() {
   return (
     <Head>
+      <title>{siteTitle}</title>
       <link rel="icon" href="/favicon.ico" />
       <meta
         name="description"
