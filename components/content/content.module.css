@@ -2,5 +2,7 @@
     flex: 2;
     padding: 1.5rem;
     position: relative;
+    max-width: 100%;
+    overflow: scroll;
 }
 
