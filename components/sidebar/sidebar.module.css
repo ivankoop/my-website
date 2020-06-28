@@ -71,9 +71,11 @@
     text-align: center;
     color: #52648e;
     margin-top: 10px;
-    position: fixed;
+    width: 100%;
+    position: absolute;
     bottom: 5px;
-    left: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .sideBarDivider {
