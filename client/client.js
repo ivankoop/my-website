@@ -6,7 +6,6 @@ const {WEBSITE_BASE_URL} = publicRuntimeConfig
 
 export class ContributionsApi {
     static getContributions() {
-        console.log("acaa", process.env)
         return axios.get(`${WEBSITE_BASE_URL}api/contributions`)
     }
 }

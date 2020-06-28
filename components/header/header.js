@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-export const siteTitle = "Ivan Koop / Full Stack Developer";
+export const siteTitle = 'Ivan Koop / Full Stack Developer';
 
 export default function Header() {
   return (
@@ -21,6 +21,10 @@ export default function Header() {
         /> */}
       <meta name="og:title" content={siteTitle} />
       <meta name="twitter:card" content="summary_large_image" />
+
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
     </Head>
   );
 }
