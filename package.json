@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently 'next dev' 'firebase emulators:start --import .'",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
     "date-fns": "^2.11.1",
     "eslint": "^7.4.0",
     "firebase-admin": "^8.12.1",
