@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './contributions.module.css';
-import {ContributionsApi} from '../../../client/client';
+import { ContributionsApi } from '../../../client/client';
 import { BulletList } from 'react-content-loader';
+import getBaseUrl from '../../../utils/baseUrlUtils';
 import _ from 'lodash';
 
 export function Contributions() {
@@ -15,7 +16,7 @@ export function Contributions() {
   const loadContributions = async () => {
     try {
       setLoading(true);
-      const response = await ContributionsApi.getContributions();
+      const response = await ContributionsApi.getContributions(getBaseUrl());
       setContributions(response?.data?.contributions);
     } catch (e) {
       console.info('ERROR', e);
@@ -33,7 +34,10 @@ export function Contributions() {
           <h2 className={styles.title}>Open Source Contributions</h2>
           {contributions.map((contribution, index) => {
             return (
-              <div key={`contribution-${index}`} className={styles.contributionCont}>
+              <div
+                key={`contribution-${index}`}
+                className={styles.contributionCont}
+              >
                 <div className={styles.contributionTextCont}>
                   <a href={contribution.url} target="_blank">
                     {contribution.name}{' '}

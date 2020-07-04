@@ -3,6 +3,7 @@ import SideBar from '../components/sidebar/sidebar';
 import Content from '../components/content/content';
 import Layout from '../components/layout/layout';
 import { ExperiencesApi } from '../client/client';
+import absoluteUrl from 'next-absolute-url';
 
 function Home({ experiences }) {
   return (
@@ -14,10 +15,12 @@ function Home({ experiences }) {
   );
 }
 
-Home.getInitialProps = async () => {
-  const response = await ExperiencesApi.getExperiences();
+Home.getInitialProps = async ({ req }) => {
+  const { protocol, host } = absoluteUrl(req);
+  const baseUrl = `${protocol}//${host}/`;
+  const response = await ExperiencesApi.getExperiences(baseUrl);
   const experiences = response.data?.experiences;
-  return {experiences}
-}
+  return { experiences };
+};
 
 export default Home;
