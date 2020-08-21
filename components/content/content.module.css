@@ -6,3 +6,11 @@
     overflow: scroll;
 }
 
+
+
+@media (min-width: 768px) {
+    .responsiveHeader  {
+        display: none;
+    }
+}
+
