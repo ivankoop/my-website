@@ -12,5 +12,9 @@
     .responsiveHeader  {
         display: none;
     }
+
+    .responsiveFooter {
+        display: none;
+    }
 }
 

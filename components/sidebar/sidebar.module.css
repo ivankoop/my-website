@@ -11,19 +11,6 @@
     
 }
 
-.copyRight {
-    margin: 0;
-    font-size: 0.6em;
-    text-align: center;
-    color: #52648e;
-    margin-top: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
 .sideBarDivider {
     position: absolute;
     height: 657px;
@@ -37,12 +24,6 @@
 
 @media (max-width: 768px) {
     .sidebarRoot {
-        display: none;
-    }
-}
-
-@media (max-width: 1280px) {
-    .copyRight {
         display: none;
     }
 }

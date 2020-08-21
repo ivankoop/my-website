@@ -3,7 +3,7 @@ import Contributions from './contributions/contributions';
 import Certifications from './certifications/certifications';
 import Divider from '../shared/divider';
 import HeaderTitles from '../shared/HeaderTitles';
-
+import Footer from "../shared/Footer"
 
 
 export default function SideBar() {
@@ -21,10 +21,7 @@ export default function SideBar() {
       <Divider />
       <Certifications />
       <div className={styles.sideBarDivider}></div>
-      <div className={styles.copyRight}>
-        Created with ❤️ by <strong>Ivan Koop</strong>, Powered by{' '}
-        <strong>NextJs</strong>
-      </div>
+      <Footer/>
     </div>
   );
 }
