@@ -7,11 +7,11 @@ function Login() {
       <Segment className={styles.segment}>
         <Form>
           <Form.Field>
-            <label>Email</label>
+            <label>Email *</label>
             <input placeholder="Email" />
           </Form.Field>
           <Form.Field>
-            <label>Password</label>
+            <label>Password *</label>
             <input placeholder="password" />
           </Form.Field>
           <Button type="submit">Submit</Button>
