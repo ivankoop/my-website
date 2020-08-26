@@ -1,0 +1,20 @@
+.contentRoot {
+    flex: 2;
+    padding: 1.5rem;
+    position: relative;
+    max-width: 100%;
+    overflow: scroll;
+}
+
+
+
+@media (min-width: 768px) {
+    .responsiveHeader  {
+        display: none;
+    }
+
+    .responsiveFooter {
+        display: none;
+    }
+}
+

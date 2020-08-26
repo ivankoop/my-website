@@ -1,0 +1,33 @@
+.certificationsCont {
+    margin-top: 10px;
+}
+
+.certificationsCont .title {
+    margin-top: 10px;
+    color: #0083ff;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.certificationsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.certificationsRow img {
+    width: auto;
+    height: 60px;
+}
+
+.certificationsRow .text {
+    color :#52648e;
+    font-size: 0.8em;
+    margin: 0;
+    font-weight: bold;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

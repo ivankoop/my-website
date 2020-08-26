@@ -1,0 +1,29 @@
+.sidebarRoot {
+    flex: 0.8;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.sidebarRoot .description {
+    color: #52648e;
+    text-align: right;
+    font-size: 0.8rem;
+    
+}
+
+.sideBarDivider {
+    position: absolute;
+    height: 657px;
+    width: 2px;
+    right: 0;
+    top: 40px;
+    background-color: rgba(212, 220, 241, 0.4);
+    border-radius: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .sidebarRoot {
+        display: none;
+    }
+}

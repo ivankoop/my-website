@@ -1,0 +1,77 @@
+.experienceRoot {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.experienceRoot:hover {
+    box-shadow: 0 93px 114px -12px rgba(115, 131, 169, 0.1);
+}
+
+.experienceRoot .topRow {
+    display: flex;
+}
+
+.experienceRoot .topRow .titleColumn {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.experienceRoot .topRow .titleColumn h2 {
+    font-size: 1rem;
+    margin: 0;
+    color: #0083ff;
+}
+
+.experienceRoot .topRow .titleColumn p {
+    font-size: 0.6rem;
+    color: #52648e;
+    margin: 0;
+}
+
+.experienceRoot .image {
+    height: 55px;
+    border-radius: 5px;
+}
+
+.experienceRoot .description {
+    color: #52648e;
+    margin: 0;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+
+.experienceRoot .tagContainer {
+    margin-top: 10px;
+}
+
+.experienceRoot .tagContainer .tagItem {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 8px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: rgba(212, 220, 241, 0.3);
+    color: #2D4379;
+    font-size: 0.7rem;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.experienceRoot .tagContainer .tagItem:hover {
+    background-color: #0083ff;
+    box-shadow: 0 14px 24px 0 rgba(39, 158, 255, 0.2);
+    color: white;
+}
+
+
