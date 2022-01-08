@@ -20,7 +20,7 @@
     "gray-matter": "^4.0.2",
     "react-hook-form": "^7.6.2",
     "lodash": "^4.17.21",
-    "next": "9.3.5",
+    "next": "11.1.3",
     "next-absolute-url": "^1.2.2",
     "prettier": "^2.0.5",
     "react": "16.13.1",
