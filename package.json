@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently 'next dev' 'firebase emulators:start --import .'",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -12,7 +12,7 @@
     "concurrently": "^5.2.0",
     "date-fns": "^2.11.1",
     "eslint": "^7.4.0",
-    "firebase-admin": "^8.12.1",
+    "faunadb": "^4.4.1",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.21",
     "next": "9.3.5",

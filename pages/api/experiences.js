@@ -1,19 +1,14 @@
-import firebase from '../../lib/firebase';
+import { query as q } from 'faunadb';
+import { faunaClient } from '../../lib/fauna';
 
-export default function experiences(req, res) {
-  firebase
-    .collection('work-experience')
-    .orderBy("order", "desc")
-    .get()
-    .then((snapshot) => {
-      const experiences = [];
-      snapshot.forEach((doc) => {
-        experiences.push(doc.data());
-      });
-      res.json({ experiences });
-    })
-    .catch((error) => {
-      console.info(error);
-      res.json({ error });
-    });
-};
+export default async function experiences(req, res) {
+  let query = await faunaClient.query(
+    q.Map(
+      q.Paginate(q.Match(q.Index('experiences_sort_by_order_desc'))),
+      q.Lambda(['order', 'ref'], q.Get(q.Var('ref')))
+    )
+  );
+  res.status(200).json({
+    experiences: query.data.map((data) => data.data),
+  });
+}
