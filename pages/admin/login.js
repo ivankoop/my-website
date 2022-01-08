@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import Layout from '../../components/layout/layout';
+import useSWR from 'swr';
 import utilStyles from '../../styles/utils.module.css';
 
 const Login = () => {
   const router = useRouter();
-
   const [errorMessage, setErrorMessage] = useState('');
 
   const {
@@ -14,6 +14,16 @@ const Login = () => {
     register,
     formState: { errors },
   } = useForm();
+
+  const { data: user, error } = useSWR('/api/user');
+
+  if (user) {
+    router.replace('/admin');
+  }
+
+  if (!error && !user) {
+    return <p>Loading...</p>;
+  }
 
   const onSubmit = handleSubmit(async (formData) => {
     if (errorMessage) setErrorMessage('');
@@ -38,7 +48,7 @@ const Login = () => {
     }
   });
 
-  return (
+  return error ? (
     <Layout>
       <h1>Log In</h1>
 
@@ -80,7 +90,7 @@ const Login = () => {
         </p>
       )}
     </Layout>
-  );
+  ) : null;
 };
 
 export default Login;

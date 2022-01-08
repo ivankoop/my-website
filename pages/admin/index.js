@@ -11,6 +11,8 @@ function Admin({ token }) {
     router.push('/admin/login');
   }
 
+  if (!user) return <p>Loading...</p>;
+
   console.log('user', user);
 
   return <Layout>Admin</Layout>;
