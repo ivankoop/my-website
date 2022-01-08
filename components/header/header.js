@@ -38,9 +38,8 @@ export default function Header() {
       <meta name="og:title" content={siteTitle} />
       <meta name="twitter:card" content="summary_large_image" />
 
-      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+      <script async src="https://cdn.splitbee.io/sb.js"></script>
 
-      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
     </Head>
   );
 }
