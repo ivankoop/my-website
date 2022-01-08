@@ -1,0 +1,12 @@
+type experiences {
+  description: String!
+  logo: String!
+  order: Int!
+  time: String!
+  title: String!
+  tags: [String!]
+}
+
+type Query {
+  allExperiences: [experiences!]
+}
