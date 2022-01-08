@@ -1,4 +1,4 @@
-type experiences {
+type Experience {
   description: String!
   logo: String!
   order: Int!
@@ -7,6 +7,10 @@ type experiences {
   tags: [String!]
 }
 
+type User {
+  email: String! @unique
+}
+
 type Query {
-  allExperiences: [experiences!]
+  allExperiences: [Experience!]
 }
