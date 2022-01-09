@@ -5,20 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "PUBLIC_URL=../public start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=$(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2)"
   },
   "dependencies": {
-    "graphql": "^15.5.0",
-    "graphql-request": "^3.4.0",
-    "cookie": "^0.4.1",
     "axios": "^0.21.2",
     "concurrently": "^5.2.0",
+    "cookie": "^0.4.1",
     "date-fns": "^2.11.1",
     "eslint": "^7.4.0",
     "faunadb": "^4.4.1",
-    "swr": "^0.5.6",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "gray-matter": "^4.0.2",
-    "react-hook-form": "^7.6.2",
     "lodash": "^4.17.21",
     "next": "9.3.5",
     "next-absolute-url": "^1.2.2",
@@ -26,8 +27,21 @@
     "react": "16.13.1",
     "react-content-loader": "^5.1.0",
     "react-dom": "16.13.1",
+    "react-hook-form": "^7.6.2",
     "react-tooltip": "^4.2.7",
     "remark": "^12.0.0",
-    "remark-html": "^13.0.2"
+    "remark-html": "^13.0.2",
+    "swr": "^0.5.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3",
+    "chromatic": "^6.3.3",
+    "css-loader": "5.2.7",
+    "style-loader": "2.0.0"
   }
 }

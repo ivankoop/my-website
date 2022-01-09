@@ -1,12 +1,14 @@
+import React from 'react';
 import styles from './sidebar.module.css';
 import Contributions from './contributions/contributions';
 import Certifications from './certifications/certifications';
 import Divider from '../shared/divider';
 import HeaderTitles from '../shared/HeaderTitles';
-import Footer from "../shared/Footer"
-
+import Footer from '../shared/Footer';
 
 export default function SideBar() {
+  console.log('styles', styles);
+
   return (
     <div className={styles.sidebarRoot}>
       <HeaderTitles />
@@ -21,7 +23,7 @@ export default function SideBar() {
       <Divider />
       <Certifications />
       <div className={styles.sideBarDivider}></div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

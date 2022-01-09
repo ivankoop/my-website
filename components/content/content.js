@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './content.module.css';
 import Experience from './experience/experience';
 import HeaderTitles from '../shared/HeaderTitles';
