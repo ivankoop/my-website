@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './certifications.module.css';
 import ReactTooltip from 'react-tooltip';
 

@@ -1,4 +1,5 @@
-import styles from "./headertitles.module.css";
+import React from 'react';
+import styles from './headertitles.module.css';
 
 const linkedinUrl = 'https://www.linkedin.com/in/ivankoop/';
 const githubUrl = 'https://github.com/ivankoop';
