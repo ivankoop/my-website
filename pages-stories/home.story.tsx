@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from './index';
+import Home from '../pages/index';
 import { experiences } from '../mocks';
 
 export default {

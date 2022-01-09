@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "storybook": "PUBLIC_URL=../public start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=$(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2)"
   },
   "dependencies": {
     "axios": "^0.21.2",
@@ -39,6 +40,7 @@
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.3.3",
     "css-loader": "5.2.7",
     "style-loader": "2.0.0"
   }
