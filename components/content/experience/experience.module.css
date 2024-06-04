@@ -6,6 +6,11 @@
     
 }
 
+.experienceRoot a {
+    text-decoration: none;
+    color: #0083ff !important;
+}
+
 .experienceRoot ul {
     padding-left: 15px;
 }
@@ -72,10 +77,11 @@
     cursor: pointer;
 }
 
+
+
 .experienceRoot .tagContainer .tagItem:hover {
     background-color: #0083ff;
     box-shadow: 0 14px 24px 0 rgba(39, 158, 255, 0.2);
     color: white;
 }
-
 
