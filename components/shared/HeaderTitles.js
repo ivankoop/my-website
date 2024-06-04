@@ -3,6 +3,8 @@ import styles from './headertitles.module.css';
 
 const linkedinUrl = 'https://www.linkedin.com/in/ivankoop/';
 const githubUrl = 'https://github.com/ivankoop';
+const cvLink =
+  'https://drive.google.com/file/d/1i4MogYnRB_j9B6n1DW_NBEhGz-rboQyE/view?usp=drive_link';
 
 export default function HeaderTitles() {
   return (
@@ -15,6 +17,9 @@ export default function HeaderTitles() {
         </a>
         <a href={githubUrl} target="_blank" className={styles.iconCont}>
           <i className="icon">&#xf113;</i>
+        </a>
+        <a href={cvLink} target="_blank" className={styles.iconCont}>
+          <i className="icon">&#xf15c;</i>
         </a>
       </div>
     </div>
