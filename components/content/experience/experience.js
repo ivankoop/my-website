@@ -12,7 +12,10 @@ export default function Experience(props) {
           <p>{data?.time}</p>
         </div>
       </div>
-      <p className={styles.description}>{data?.description}</p>
+      <div
+        className={styles.description}
+        dangerouslySetInnerHTML={{ __html: data?.description }}
+      ></div>
       <div className={styles.tagContainer}>
         {data?.tags.map((tag, index) => (
           <div className={styles.tagItem} key={`tag-${index}`}>

@@ -6,6 +6,10 @@
     
 }
 
+.experienceRoot ul {
+    padding-left: 15px;
+}
+
 .experienceRoot:hover {
     box-shadow: 0 93px 114px -12px rgba(115, 131, 169, 0.1);
 }

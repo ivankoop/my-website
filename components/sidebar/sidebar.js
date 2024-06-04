@@ -14,7 +14,7 @@ export default function SideBar() {
       <HeaderTitles />
       <Divider />
       <p className={styles.description}>
-        Passionate self-taught developer, 28 years old. Experienced with a wide
+        Passionate self-taught developer, 29 years old. Experienced with a wide
         range of frontend & backend technologies, specialized on Frontend
         development.
       </p>
