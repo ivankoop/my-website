@@ -25,7 +25,7 @@ export default function Content(props) {
         <Divider />
       </div>
 
-      <div className={styles.responsiveExperiences}>
+      <div id="experiences" className={styles.responsiveExperiences}>
         {experiences.map((experience, index) => (
           <div key={`experience-${index}`}>
             <Experience data={experience} isLast={index === experiences.length - 1} />
@@ -36,12 +36,12 @@ export default function Content(props) {
         </div>
       </div>
 
-      <div className={styles.responsiveContributions}>
+      <div id="contributions" className={styles.responsiveContributions}>
         <Contributions />
         <Divider />
       </div>
 
-      <div className={styles.responsiveSkills}>
+      <div id="skills" className={styles.responsiveSkills}>
         <Skills />
       </div>
 
