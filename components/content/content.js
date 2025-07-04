@@ -26,7 +26,6 @@ export default function Content(props) {
       </div>
 
       <div className={styles.responsiveExperiences}>
-        <h2 className={styles.sectionTitle}>Experience</h2>
         {experiences.map((experience, index) => (
           <div key={`experience-${index}`}>
             <Experience data={experience} isLast={index === experiences.length - 1} />
