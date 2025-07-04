@@ -43,24 +43,33 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 5px;
+    margin-top: -5px;
 }
 
 .iconCont {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     background-color: var(--tag-bg-color);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 8px;
     transition: 0.3s;
     text-decoration: none;
 }
 
 .iconCont svg {
     color: var(--text-color);
+}
+
+.mediumLogo {
+    mask: url('/images/Medium Logo.svg') no-repeat center / contain;
+    -webkit-mask: url('/images/Medium Logo.svg') no-repeat center / contain;
+    background-color: var(--text-color);
+    width: 16px;
+    height: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .iconCont:hover {
@@ -70,6 +79,10 @@
 
 .iconCont:hover svg{
     color: white;
+}
+
+.iconCont:hover .mediumLogo {
+    background-color: white;
 }
 
 @media (max-width: 768px) {
