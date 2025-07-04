@@ -41,10 +41,11 @@ export default function Content(props) {
     }
   }, []);
   return (
-    <div 
-      ref={contentRef}
-      className={`${styles.contentRoot} ${isScrolling ? styles.scrolling : ''}`}
-    >
+    <>
+      <div 
+        ref={contentRef}
+        className={`${styles.contentRoot} ${isScrolling ? styles.scrolling : ''}`}
+      >
       <div className={styles.responsiveHeader}>
         <HeaderTitles />
         <Divider />
@@ -82,6 +83,8 @@ export default function Content(props) {
       <div className={styles.responsiveFooter}>
         <Footer />
       </div>
-    </div>
+      <div className={`${styles.scrollShadow} ${isScrolling ? styles.scrolling : ''}`}></div>
+      </div>
+    </>
   );
 }
