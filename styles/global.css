@@ -16,8 +16,25 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   height: 100%;
-  overflow: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Desktop - prevent overflow */
+@media (min-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}
+
+/* Mobile - allow scrolling */
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 * {

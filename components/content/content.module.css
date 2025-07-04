@@ -8,6 +8,15 @@
     overflow-x: hidden;
 }
 
+/* Mobile - natural height and no overflow restrictions */
+@media (max-width: 767px) {
+    .contentRoot {
+        height: auto;
+        overflow: visible;
+        flex: none;
+    }
+}
+
 
 
 @media (min-width: 768px) {

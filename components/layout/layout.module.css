@@ -7,6 +7,16 @@
     overflow: hidden;
 }
 
+/* Mobile - allow natural height and scrolling */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+}
+
 @media (min-width: 640px) {
     .container {
         max-width: 640px;
