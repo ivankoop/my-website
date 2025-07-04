@@ -31,7 +31,9 @@ export default function Content(props) {
             <Experience data={experience} isLast={index === experiences.length - 1} />
           </div>
         ))}
-        <Divider />
+        <div className={styles.mobileOnlyDivider}>
+          <Divider />
+        </div>
       </div>
 
       <div className={styles.responsiveContributions}>
