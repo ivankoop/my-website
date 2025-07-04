@@ -51,16 +51,16 @@
     height: 36px;
     background-color: var(--tag-bg-color);
     border-radius: 10px;
-    text-align: center;
-    line-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 10px;
     transition: 0.3s;
     text-decoration: none;
 }
 
-.iconCont i {
+.iconCont svg {
     color: var(--text-color);
-    font-size: 20px;
 }
 
 .iconCont:hover {
@@ -68,7 +68,7 @@
     box-shadow: 0 14px 24px 0 rgba(39, 158, 255, 0.2);
 }
 
-.iconCont:hover i{
+.iconCont:hover svg{
     color: white;
 }
 

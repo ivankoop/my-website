@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linkedin, Github, FileText } from 'lucide-react';
 import styles from './headertitles.module.css';
 
 const linkedinUrl = 'https://www.linkedin.com/in/ivankoop/';
@@ -22,13 +23,13 @@ export default function HeaderTitles() {
       </div>
       <div className={styles.iconsRow}>
         <a href={linkedinUrl} target="_blank" className={styles.iconCont}>
-          <i className="icon">&#xf30c;</i>
+          <Linkedin size={20} />
         </a>
         <a href={githubUrl} target="_blank" className={styles.iconCont}>
-          <i className="icon">&#xf113;</i>
+          <Github size={20} />
         </a>
         <a href={cvLink} target="_blank" className={styles.iconCont}>
-          <i className="icon">&#xf15c;</i>
+          <FileText size={20} />
         </a>
       </div>
     </div>

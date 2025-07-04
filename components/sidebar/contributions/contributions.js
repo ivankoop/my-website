@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Star } from 'lucide-react';
 import styles from './contributions.module.css';
 import { BulletList } from 'react-content-loader';
 import getBaseUrl from '../../../utils/baseUrlUtils';
@@ -49,10 +50,10 @@ export function Contributions() {
                 <div className={styles.contributionTextCont}>
                   <a href={contribution.url} target="_blank">
                     {contribution.name}{' '}
-                    <span>
-                      <i className="icon">&#xe800;</i>{' '}
+                    <span className={styles.starContainer}>
+                      <Star size={12} fill="currentColor" />
+                      <span>{contribution.stars}</span>
                     </span>
-                    <span>{contribution.stars}</span>
                   </a>
                   <p>{contribution.description}</p>
                 </div>

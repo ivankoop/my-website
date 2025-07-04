@@ -10,7 +10,8 @@
       "Bash(yarn dev)",
       "Bash(rg:*)",
       "Bash(npm install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }

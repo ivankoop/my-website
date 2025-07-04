@@ -42,10 +42,6 @@
     margin-bottom: 5px;
 }
 
-.contributionsRoot i {
-    color: var(--text-color);
-    margin: 0;
-}
 
 
 .contributionTextCont {
@@ -65,4 +61,10 @@
     font-size: 0.6em;
     margin: 0;
     padding: 0;
+}
+
+.starContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
 }

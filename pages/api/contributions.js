@@ -9,6 +9,12 @@ const getRepo = (repoUrl) => {
 };
 
 export default async function contributions(req, res) {
+  console.log('Environment check:', {
+    hasBaseUrl: !!process.env.GITHUB_BASE_URL,
+    hasApiKey: !!process.env.GITHUB_API_KEY,
+    baseUrl: process.env.GITHUB_BASE_URL
+  });
+  
   const repos = await Promise.all([
     getRepo('stripe/stripe-react-native'),
     getRepo('aautio/react-modal-image'),
