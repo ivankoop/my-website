@@ -14,14 +14,33 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check if user has a saved preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark');
-    }
+    // Only run on client side (not during SSR)
+    if (typeof window === 'undefined') return;
+
+    // Always use system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log('Using system preference. Dark mode:', prefersDark);
+    setIsDarkMode(prefersDark);
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = (e) => {
+      console.log('System theme changed. Dark mode:', e.matches);
+      setIsDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+    
+    // Cleanup listener
+    return () => {
+      mediaQuery.removeEventListener('change', handleSystemThemeChange);
+    };
   }, []);
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+    
     // Update CSS custom properties when theme changes
     const root = document.documentElement;
     if (isDarkMode) {
@@ -37,9 +56,6 @@ export const ThemeProvider = ({ children }) => {
       root.style.setProperty('--progress-bg-color', '#e5e7eb');
       root.style.setProperty('--divider-bg-color', 'rgba(212, 220, 241, 0.4)');
     }
-    
-    // Save preference to localStorage
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
   const toggleTheme = () => {
