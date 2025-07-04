@@ -1,16 +1,38 @@
+.profileSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.profilePicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
 .headerTitlesRoot .title {
     font-size: 2.25rem;
     text-align: right;
     margin: 0;
     color: #0083ff;
-    height: 60px;
+    height: auto;
+    line-height: 1;
 }
 
 .headerTitlesRoot .subtitle {
     font-size: 1rem;
     margin: 0;
     text-align: right;
-    color: #2d4379;
+    color: var(--text-color);
     margin-right: 4px;
 }
 
@@ -27,7 +49,7 @@
 .iconCont {
     width: 36px;
     height: 36px;
-    background-color: rgba(212, 220, 241, 0.3);
+    background-color: var(--tag-bg-color);
     border-radius: 10px;
     text-align: center;
     line-height: 36px;
@@ -37,7 +59,7 @@
 }
 
 .iconCont i {
-    color: #2d4379;
+    color: var(--text-color);
     font-size: 20px;
 }
 
@@ -51,8 +73,17 @@
 }
 
 @media (max-width: 768px) {
+    .profileSection {
+        gap: 10px;
+    }
+    
+    .profilePicture {
+        width: 60px;
+        height: 60px;
+    }
+    
     .headerTitlesRoot .title {
-        height: 40px;
+        height: auto;
         font-size: 1.6rem;
     }
     .headerTitlesRoot .subtitle {

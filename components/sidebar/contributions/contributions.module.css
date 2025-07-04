@@ -2,6 +2,29 @@
     margin-top: 10px;
 }
 
+@media (max-width: 767px) {
+    .contributionsRoot {
+        margin-top: 20px;
+    }
+    
+    .contributionsRoot .title {
+        text-align: left !important;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contributionCont {
+        justify-content: flex-start !important;
+        flex-direction: row !important;
+    }
+    
+    .contributionTextCont {
+        text-align: left !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .contributionsRoot .title {
     font-size: 1rem;
     margin: 0;
@@ -20,7 +43,7 @@
 }
 
 .contributionsRoot i {
-    color: #2d4379;
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -30,7 +53,7 @@
 }
 
 .contributionTextCont a {
-    color: #2d4379;
+    color: var(--text-color);
     font-size: 0.8em;
     margin: 0;
     font-weight: bold;
@@ -38,7 +61,7 @@
 }
 
 .contributionTextCont p {
-    color: #2d4379;
+    color: var(--text-color);
     font-size: 0.6em;
     margin: 0;
     padding: 0;

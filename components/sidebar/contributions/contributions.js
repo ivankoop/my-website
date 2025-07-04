@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from './contributions.module.css';
-import { ContributionsApi } from '../../../client/client';
 import { BulletList } from 'react-content-loader';
 import getBaseUrl from '../../../utils/baseUrlUtils';
 import _ from 'lodash';
@@ -16,8 +15,9 @@ export function Contributions() {
   const loadContributions = async () => {
     try {
       setLoading(true);
-      const response = await ContributionsApi.getContributions(getBaseUrl());
-      setContributions(response?.data?.contributions);
+      const response = await fetch(`${getBaseUrl()}/api/contributions`);
+      const data = await response.json();
+      setContributions(data?.contributions);
     } catch (e) {
       console.info('ERROR', e);
     } finally {
@@ -25,7 +25,15 @@ export function Contributions() {
     }
   };
 
-  if (isLoading) return <BulletList />;
+  if (isLoading) return (
+    <div className={styles.contributionsRoot}>
+      <h2 className={styles.title}>Open Source Contributions</h2>
+      <BulletList 
+        backgroundColor="var(--progress-bg-color)"
+        foregroundColor="var(--tag-bg-color)"
+      />
+    </div>
+  );
 
   return (
     <div className={styles.contributionsRoot}>

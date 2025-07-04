@@ -9,8 +9,17 @@ const cvLink =
 export default function HeaderTitles() {
   return (
     <div className={styles.headerTitlesRoot}>
-      <h1 className={styles.title}>Ivan Koop</h1>
-      <h2 className={styles.subtitle}>Software Developer</h2>
+      <div className={styles.profileSection}>
+        <img 
+          src="/images/profile-picture.jpg" 
+          alt="Ivan Koop" 
+          className={styles.profilePicture}
+        />
+        <div className={styles.titleSection}>
+          <h1 className={styles.title}>Ivan Koop</h1>
+          <h2 className={styles.subtitle}>Software Developer</h2>
+        </div>
+      </div>
       <div className={styles.iconsRow}>
         <a href={linkedinUrl} target="_blank" className={styles.iconCont}>
           <i className="icon">&#xf30c;</i>

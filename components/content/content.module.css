@@ -3,7 +3,9 @@
     padding: 1.5rem;
     position: relative;
     max-width: 100%;
-    overflow: scroll;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -13,8 +15,42 @@
         display: none;
     }
 
+    .responsiveDescription {
+        display: none;
+    }
+
+    .responsiveContributions {
+        display: none;
+    }
+
+    .responsiveSkills {
+        display: none;
+    }
+
     .responsiveFooter {
         display: none;
+    }
+
+    .sectionTitle {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .sectionTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #0083ff;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .description {
+        color: var(--text-color);
+        text-align: right;
+        font-size: 0.8rem;
+        margin: 15px 0;
     }
 }
 

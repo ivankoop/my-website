@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nextjs.org)",
+      "Bash(yarn install)",
+      "Bash(yarn build)",
+      "Bash(timeout 10 yarn dev)",
+      "Bash(pkill:*)",
+      "Bash(rm:*)",
+      "Bash(yarn dev)",
+      "Bash(rg:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

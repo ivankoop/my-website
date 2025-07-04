@@ -40,7 +40,7 @@
 
 .experienceRoot .topRow .titleColumn p {
     font-size: 0.6rem;
-    color: #52648e;
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .experienceRoot .description {
-    color: #52648e;
+    color: var(--text-color);
     margin: 0;
     font-size: 0.8rem;
     margin-top: 5px;
@@ -70,8 +70,8 @@
     margin-top: 8px;
     border-radius: 10px;
     margin-right: 5px;
-    background-color: rgba(212, 220, 241, 0.3);
-    color: #2D4379;
+    background-color: var(--tag-bg-color);
+    color: var(--text-color);
     font-size: 0.7rem;
     font-style: italic;
     cursor: pointer;
@@ -83,5 +83,23 @@
     background-color: #0083ff;
     box-shadow: 0 14px 24px 0 rgba(39, 158, 255, 0.2);
     color: white;
+}
+
+@media (max-width: 767px) {
+    .experienceRoot {
+        padding: 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(212, 220, 241, 0.3) !important;
+        padding-bottom: 15px;
+        border-radius: 0;
+    }
+    
+    .lastExperience {
+        border-bottom: none !important;
+    }
+    
+    .experienceRoot:hover {
+        box-shadow: none;
+    }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './sidebar.module.css';
+import Skills from './skills/skills';
 import Contributions from './contributions/contributions';
-import Certifications from './certifications/certifications';
 import Divider from '../shared/divider';
 import HeaderTitles from '../shared/HeaderTitles';
 import Footer from '../shared/Footer';
@@ -10,20 +10,22 @@ export default function SideBar() {
   console.log('styles', styles);
 
   return (
-    <div className={styles.sidebarRoot}>
-      <HeaderTitles />
-      <Divider />
-      <p className={styles.description}>
-        Passionate self-taught developer, 29 years old. Experienced with a wide
-        range of frontend & backend technologies, specialized on Frontend
-        development.
-      </p>
-      <Divider />
-      <Contributions />
-      <Divider />
-      <Certifications />
+    <div className={styles.sidebarContainer}>
+      <div className={styles.sidebarRoot}>
+        <HeaderTitles />
+        <Divider />
+        <p className={styles.description}>
+          Senior Full Stack Developer with more than 10 years of experience.
+          Experienced with a wide range of frontend & backend technologies,
+          specialized on Frontend development.
+        </p>
+        <Divider />
+        <Contributions />
+        <Divider />
+        <Skills />
+        <Footer />
+      </div>
       <div className={styles.sideBarDivider}></div>
-      <Footer />
     </div>
   );
 }

@@ -10,16 +10,21 @@ const getRepo = (repoUrl) => {
 
 export default async function contributions(req, res) {
   const repos = await Promise.all([
+    getRepo('stripe/stripe-react-native'),
     getRepo('aautio/react-modal-image'),
-    getRepo('ivankoop/quiniela-mail-scraper'),
-    getRepo('ivankoop/Mosquito-Attack-Game'),
-    getRepo('ivankoop/ee4_elastic_search'),
+    getRepo('reactjs/es.react.dev'),
+    getRepo('ivankoop/ionic-capacitor-biometric'),
   ]);
 
   const contributions = repos.map((repo) => {
+    console.log(repo.data);
+
     return {
       name: repo.data.name,
-      description: repo.data.description,
+      description:
+        repo.data.name === 'es.react.dev'
+          ? 'React documentation website'
+          : repo.data.description,
       stars: repo.data.stargazers_count,
       url: repo.data.html_url,
     };

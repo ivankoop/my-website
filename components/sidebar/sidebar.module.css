@@ -1,11 +1,18 @@
-.sidebarRoot {
+.sidebarContainer {
     flex: 0.8;
-    padding: 1.5rem;
     position: relative;
+    height: 100vh;
+}
+
+.sidebarRoot {
+    padding: 1.5rem;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .sidebarRoot .description {
-    color: #52648e;
+    color: var(--text-color);
     text-align: right;
     font-size: 0.8rem;
     
@@ -13,17 +20,17 @@
 
 .sideBarDivider {
     position: absolute;
-    height: 657px;
+    height: 100%;
     width: 2px;
     right: 0;
-    top: 40px;
-    background-color: rgba(212, 220, 241, 0.4);
+    top: 0;
+    background-color: var(--divider-bg-color);
     border-radius: 40px;
 }
 
 
 @media (max-width: 768px) {
-    .sidebarRoot {
+    .sidebarContainer {
         display: none;
     }
 }
