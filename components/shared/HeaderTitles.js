@@ -20,7 +20,7 @@ export default function HeaderTitles() {
         />
         <div className={styles.titleSection}>
           <h1 className={styles.title}>Ivan Koop</h1>
-          <h2 className={styles.subtitle}>Software Developer</h2>
+          <h2 className={styles.subtitle}>SOFTWARE DEVELOPER</h2>
         </div>
       </div>
       <div className={styles.iconsRow}>
