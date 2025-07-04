@@ -25,7 +25,7 @@ export default function Content(props) {
       // Set timeout to hide shadow after scrolling stops
       scrollTimeoutRef.current = setTimeout(() => {
         setIsScrolling(false);
-      }, 150);
+      }, 500);
     };
 
     const contentElement = contentRef.current;
