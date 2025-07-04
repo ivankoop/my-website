@@ -35,7 +35,7 @@ const skills = [
     percentage: 65
   },
   {
-    name: 'BE Technologies (Java, PHP, .NET)',
+    name: 'Backend (Java, PHP, .NET)',
     percentage: 50
   }
 ];
@@ -47,8 +47,8 @@ export default function Skills() {
       {skills.map((skill, index) => (
         <div key={`skill-${index}`} className={styles.skillItem}>
           <div className={styles.skillHeader}>
-            <span className={styles.skillName}>{skill.name}</span>
-            <span className={styles.skillPercentage}>{skill.percentage}%</span>
+            <span className={`${styles.skillName} skill-name`}>{skill.name}</span>
+            <span className={`${styles.skillPercentage} skill-name`}>{skill.percentage}%</span>
           </div>
           <div className={styles.progressBarContainer}>
             <div 

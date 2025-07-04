@@ -9,7 +9,7 @@ export default function Experience(props) {
         <img className={styles.image} src={data?.logo}></img>
         <div className={styles.titleColumn}>
           <h2>{data?.title}</h2>
-          <p>{data?.time}</p>
+          <p className="date-text">{data?.time}</p>
         </div>
       </div>
       <div
@@ -18,7 +18,7 @@ export default function Experience(props) {
       ></div>
       <div className={styles.tagContainer}>
         {data?.tags.map((tag, index) => (
-          <div className={styles.tagItem} key={`tag-${index}`}>
+          <div className={`${styles.tagItem} tech-label`} key={`tag-${index}`}>
             {tag}
           </div>
         ))}
