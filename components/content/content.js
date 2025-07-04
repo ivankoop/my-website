@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styles from './content.module.css';
 import Experience from './experience/experience';
 import HeaderTitles from '../shared/HeaderTitles';
@@ -9,8 +9,42 @@ import Contributions from '../sidebar/contributions/contributions';
 
 export default function Content(props) {
   const { experiences } = props;
+  const contentRef = useRef(null);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true);
+      
+      // Clear existing timeout
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      
+      // Set timeout to hide shadow after scrolling stops
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 150);
+    };
+
+    const contentElement = contentRef.current;
+    if (contentElement) {
+      contentElement.addEventListener('scroll', handleScroll);
+      
+      return () => {
+        contentElement.removeEventListener('scroll', handleScroll);
+        if (scrollTimeoutRef.current) {
+          clearTimeout(scrollTimeoutRef.current);
+        }
+      };
+    }
+  }, []);
   return (
-    <div className={styles.contentRoot}>
+    <div 
+      ref={contentRef}
+      className={`${styles.contentRoot} ${isScrolling ? styles.scrolling : ''}`}
+    >
       <div className={styles.responsiveHeader}>
         <HeaderTitles />
         <Divider />

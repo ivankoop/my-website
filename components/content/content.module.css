@@ -8,12 +8,61 @@
     overflow-x: hidden;
 }
 
+.contentRoot {
+    position: relative;
+}
+
+.contentRoot::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: calc(var(--sidebar-width, 50%) + 1.5rem);
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--bg-color) 0%, var(--bg-color) 20%, transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contentRoot.scrolling::after {
+    opacity: 1;
+}
+
+/* Set the sidebar and content width variables for different screen sizes */
+@media (min-width: 768px) {
+    .contentRoot {
+        --sidebar-width: calc(100vw * 0.8 / 2.8);
+        --content-width: calc(100vw * 2 / 2.8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contentRoot {
+        --sidebar-width: calc(1024px * 0.8 / 2.8);
+        --content-width: calc(1024px * 2 / 2.8);
+    }
+}
+
+@media (min-width: 1280px) {
+    .contentRoot {
+        --sidebar-width: calc(1280px * 0.8 / 2.8);
+        --content-width: calc(1280px * 2 / 2.8);
+    }
+}
+
+
 /* Mobile - natural height and no overflow restrictions */
 @media (max-width: 767px) {
     .contentRoot {
         height: auto;
         overflow: visible;
         flex: none;
+    }
+    
+    .contentRoot::after {
+        display: none;
     }
 }
 
