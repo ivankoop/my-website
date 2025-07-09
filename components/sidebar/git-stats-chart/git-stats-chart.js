@@ -23,7 +23,7 @@ export function GitStatsChart() {
   };
 
   const generateWeeklyData = () => {
-    if (!gitStats?.commits) return [];
+    if (!gitStats?.commits) return { weeks: [], monthLabels: [] };
     
     const weeks = [];
     const monthLabels = [];
@@ -145,6 +145,9 @@ export function GitStatsChart() {
   if (!gitStats) return null;
 
   const { weeks, monthLabels } = generateWeeklyData();
+  
+  // Additional safety check in case generateWeeklyData returns undefined
+  if (!weeks || !monthLabels) return null;
 
   return (
     <div className={styles.gitStatsRoot}>
@@ -157,7 +160,7 @@ export function GitStatsChart() {
         </div>
         
         <div className={styles.monthLabels}>
-          {monthLabels.map((monthLabel, index) => (
+          {monthLabels && monthLabels.map((monthLabel, index) => (
             <div key={index} className={styles.monthLabel}>
               {monthLabel ? monthLabel.month : ''}
             </div>
@@ -165,9 +168,9 @@ export function GitStatsChart() {
         </div>
         
         <div className={styles.contributionChart}>
-          {weeks.map((week, weekIndex) => (
+          {weeks && weeks.map((week, weekIndex) => (
             <div key={weekIndex} className={styles.week}>
-              {week.map((day, dayIndex) => (
+              {week && week.map((day, dayIndex) => (
                 <div
                   key={`${weekIndex}-${dayIndex}`}
                   className={`${styles.day} ${styles[`level${day.level}`]}`}
