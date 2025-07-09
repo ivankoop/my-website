@@ -48,8 +48,10 @@ export default async function gitStats(req, res) {
     )) {
       const commitDate = new Date(dateStr);
       if (commitDate >= oneYearAgo && commitDate <= today) {
-        lastYearCommits[dateStr] = dayCommits;
-        lastYearCommitCount += Object.keys(dayCommits).length;
+        // Transform to only store commit count, not hashes
+        const commitCount = Object.keys(dayCommits).length;
+        lastYearCommits[dateStr] = { count: commitCount };
+        lastYearCommitCount += commitCount;
       }
     }
 
@@ -98,7 +100,7 @@ function getMostActiveDay(commits) {
   let mostActiveDay = null;
 
   for (const [date, dayCommits] of Object.entries(commits)) {
-    const commitCount = Object.keys(dayCommits).length;
+    const commitCount = dayCommits.count;
     if (commitCount > maxCommits) {
       maxCommits = commitCount;
       mostActiveDay = { date, commits: commitCount };
@@ -116,6 +118,6 @@ function getRecentActivity(commits) {
 
   return recentDates.map((date) => ({
     date,
-    commits: Object.keys(commits[date]).length,
+    commits: commits[date].count,
   }));
 }

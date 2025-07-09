@@ -52,8 +52,8 @@ export function GitStatsChart() {
           year: 'numeric'
         });
         
-        const commits = gitStats.commits[dateStr] || {};
-        const commitCount = Object.keys(commits).length;
+        const commits = gitStats.commits[dateStr] || { count: 0 };
+        const commitCount = commits.count;
         
         weekData.push({
           date: dateStr,

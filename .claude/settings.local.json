@@ -12,7 +12,15 @@
       "Bash(npm install:*)",
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(yarn add:*)",
+      "Bash(npx git-stats:*)",
+      "Bash(node:*)",
+      "Bash(yarn upload-git-stats:*)",
+      "Bash(curl:*)",
+      "Bash(true)",
+      "Bash(git reset:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": []
   }
