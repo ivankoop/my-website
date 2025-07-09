@@ -13,14 +13,6 @@ const BUCKET_NAME = process.env.S3_BUCKET_NAME || 'ivankoop-dev';
 
 export default async function gitStats(req, res) {
   try {
-    console.log('Environment check:', {
-      hasAccessKey: !!process.env.AWS_ACCESS_KEY,
-      hasSecretKey: !!process.env.AWS_SECRET_KEY,
-      hasRegion: !!process.env.AWS_REGION,
-      hasBucket: !!process.env.S3_BUCKET_NAME,
-      region: process.env.AWS_REGION || 'us-east-2',
-      bucket: BUCKET_NAME
-    });
 
     // Get git-stats data from S3
     const getObjectParams = {
@@ -28,7 +20,6 @@ export default async function gitStats(req, res) {
       Key: 'git-stats/git-stats.json'
     };
 
-    console.log('📊 Fetching git-stats from S3...');
     const command = new GetObjectCommand(getObjectParams);
     const response = await s3Client.send(command);
     
@@ -45,9 +36,6 @@ export default async function gitStats(req, res) {
     const dataString = await streamToString(response.Body);
     const gitStatsData = JSON.parse(dataString);
 
-    console.log('✅ Git-stats data fetched successfully');
-    console.log(`📈 Total commits: ${gitStatsData.totalCommits}`);
-    console.log(`📅 Last updated: ${gitStatsData.timestamp}`);
 
     // Filter commits for the last year (from today to last year same day)
     const today = new Date();
@@ -88,7 +76,6 @@ export default async function gitStats(req, res) {
     res.status(200).json(processedData);
 
   } catch (error) {
-    console.error('❌ Error fetching git-stats:', error);
     
     if (error.name === 'NoSuchKey') {
       res.status(404).json({ 

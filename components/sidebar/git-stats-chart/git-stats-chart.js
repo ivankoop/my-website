@@ -18,7 +18,6 @@ export function GitStatsChart() {
       const data = await response.json();
       setGitStats(data);
     } catch (e) {
-      console.info('ERROR loading git stats:', e);
     } finally {
       setLoading(false);
     }

@@ -8,8 +8,6 @@ import HeaderTitles from '../shared/HeaderTitles';
 import Footer from '../shared/Footer';
 
 export default function SideBar() {
-  console.log('styles', styles);
-
   return (
     <div className={styles.sidebarContainer}>
       <div className={styles.sidebarRoot}>

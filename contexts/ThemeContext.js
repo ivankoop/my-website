@@ -19,13 +19,11 @@ export const ThemeProvider = ({ children }) => {
 
     // Always use system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    console.log('Using system preference. Dark mode:', prefersDark);
     setIsDarkMode(prefersDark);
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleSystemThemeChange = (e) => {
-      console.log('System theme changed. Dark mode:', e.matches);
       setIsDarkMode(e.matches);
     };
 
