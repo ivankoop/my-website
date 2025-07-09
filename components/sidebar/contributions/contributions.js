@@ -30,8 +30,8 @@ export function Contributions() {
     <div className={styles.contributionsRoot}>
       <h2 className={styles.title}>Open Source Contributions</h2>
       <BulletList 
-        backgroundColor="var(--progress-bg-color)"
-        foregroundColor="var(--tag-bg-color)"
+        backgroundColor="var(--tag-bg-color)"
+        foregroundColor="var(--divider-bg-color)"
       />
     </div>
   );
