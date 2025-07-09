@@ -60,6 +60,10 @@
         display: none;
     }
 
+    .responsiveGitStats {
+        display: none;
+    }
+
     .responsiveSkills {
         display: none;
     }

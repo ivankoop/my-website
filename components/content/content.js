@@ -6,6 +6,7 @@ import Divider from '../shared/divider';
 import Footer from '../shared/Footer';
 import Skills from '../sidebar/skills/skills';
 import Contributions from '../sidebar/contributions/contributions';
+import GitStatsChart from '../sidebar/git-stats-chart/git-stats-chart';
 
 export default function Content(props) {
   const { experiences } = props;
@@ -73,6 +74,11 @@ export default function Content(props) {
 
       <div id="contributions" className={styles.responsiveContributions}>
         <Contributions />
+        <Divider />
+      </div>
+
+      <div id="git-stats" className={styles.responsiveGitStats}>
+        <GitStatsChart />
         <Divider />
       </div>
 

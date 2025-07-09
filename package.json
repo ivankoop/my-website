@@ -6,14 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "chromatic": "npx chromatic --project-token=$(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2)"
+    "chromatic": "npx chromatic --project-token=$(grep CHROMATIC_PROJECT_TOKEN .env | cut -d '=' -f2)",
+    "upload-git-stats": "node scripts/upload-git-stats.js"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.842.0",
     "axios": "^1.7.0",
     "concurrently": "^8.2.0",
     "cookie": "^0.6.0",
     "date-fns": "^3.6.0",
     "eslint": "^8.57.0",
+    "git-stats": "^3.2.1",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "lucide-react": "^0.525.0",

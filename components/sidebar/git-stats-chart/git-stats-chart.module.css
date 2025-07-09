@@ -1,0 +1,261 @@
+.gitStatsRoot {
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 0;
+  text-align: right;
+  color: #0083ff;
+  margin-right: 4px;
+  margin-bottom: 12px;
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-end;
+}
+
+.monthLabels {
+  display: flex;
+  gap: 2px;
+  padding: 0 0.5rem;
+  align-items: center;
+  height: 12px;
+}
+
+.monthLabel {
+  width: 10px;
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1;
+}
+
+.contributionChart {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  padding: 0.5rem;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.day {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.day:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--text-primary);
+}
+
+/* Activity levels using CSS variables for dynamic theme switching */
+.level0 {
+  background-color: var(--tag-bg-color);
+  border: 1px solid var(--divider-bg-color);
+}
+
+.level1 {
+  background-color: rgba(0, 131, 255, 0.3);
+}
+
+.level2 {
+  background-color: rgba(0, 131, 255, 0.5);
+}
+
+.level3 {
+  background-color: rgba(0, 131, 255, 0.7);
+}
+
+.level4 {
+  background-color: #0083ff;
+}
+
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.contributionCount {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.contributionText {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legendLeft {
+  display: flex;
+  align-items: center;
+}
+
+.legendRight {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lastUpdated {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+ 
+}
+
+.legendText {
+  font-size: 0.7rem;
+}
+
+.legendSquares {
+  display: flex;
+  gap: 2px;
+}
+
+.legendSquare {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+.summaryText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.summaryText strong {
+  color: var(--text-primary);
+}
+
+.disclaimer {
+  margin-top: 0.5rem;
+  width: 100%;
+  line-height: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.disclaimerText {
+  color: var(--text-color);
+  font-size: 0.6em;
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .gitStatsRoot {
+    margin-top: 20px;
+  }
+  
+  .title {
+    text-align: left !important;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .statsContainer {
+    align-items: flex-start;
+  }
+  
+  .monthLabels {
+    padding: 0 0.25rem;
+  }
+  
+  .monthLabel {
+    width: 10px;
+    font-size: 0.6rem;
+  }
+  
+  .contributionChart {
+    gap: 2px;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .week {
+    gap: 2px;
+    flex: 1;
+  }
+  
+  .day {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+  
+  .legendSquare {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .summary {
+    text-align: left;
+  }
+  
+  .contributionCount {
+    justify-content: flex-start;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contributionText {
+    font-size: 0.7rem;
+  }
+  
+  .lastUpdated {
+    font-size: 0.6rem;
+  }
+  
+  .legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+  
+  .disclaimer {
+    justify-content: flex-start;
+  }
+  
+  .disclaimerText {
+    font-size: 0.6rem;
+  }
+}

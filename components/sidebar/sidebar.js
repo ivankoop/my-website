@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './sidebar.module.css';
 import Skills from './skills/skills';
 import Contributions from './contributions/contributions';
+import GitStatsChart from './git-stats-chart/git-stats-chart';
 import Divider from '../shared/divider';
 import HeaderTitles from '../shared/HeaderTitles';
 import Footer from '../shared/Footer';
@@ -21,6 +22,8 @@ export default function SideBar() {
         </p>
         <Divider />
         <Contributions />
+        <Divider />
+        <GitStatsChart />
         <Divider />
         <Skills />
         <Footer />
