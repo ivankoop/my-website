@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from './git-stats-chart.module.css';
-import { BulletList } from 'react-content-loader';
 import getBaseUrl from '../../../utils/baseUrlUtils';
 
 export function GitStatsChart() {
@@ -97,10 +96,49 @@ export function GitStatsChart() {
   if (isLoading) return (
     <div className={styles.gitStatsRoot}>
       <h2 className={styles.title}>Git Activity</h2>
-      <BulletList 
-        backgroundColor="var(--progress-bg-color)"
-        foregroundColor="var(--tag-bg-color)"
-      />
+      <div className={styles.statsContainer}>
+        <div className={styles.contributionCount}>
+          <div className={styles.skeletonText}></div>
+        </div>
+        
+        <div className={styles.monthLabels}>
+          {Array.from({ length: 26 }, (_, i) => (
+            <div key={i} className={styles.monthLabel}>
+              {i % 4 === 0 ? <div className={styles.skeletonMonth}></div> : ''}
+            </div>
+          ))}
+        </div>
+        
+        <div className={styles.contributionChart}>
+          {Array.from({ length: 26 }, (_, weekIndex) => (
+            <div key={weekIndex} className={styles.week}>
+              {Array.from({ length: 7 }, (_, dayIndex) => (
+                <div
+                  key={`${weekIndex}-${dayIndex}`}
+                  className={`${styles.day} ${styles.skeletonDay}`}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+        
+        <div className={styles.legend}>
+          <div className={styles.legendLeft}>
+            <div className={styles.skeletonUpdated}></div>
+          </div>
+          <div className={styles.legendRight}>
+            <span className={styles.legendText}>Less</span>
+            <div className={styles.legendSquares}>
+              <div className={`${styles.legendSquare} ${styles.skeletonSquare}`} />
+              <div className={`${styles.legendSquare} ${styles.skeletonSquare}`} />
+              <div className={`${styles.legendSquare} ${styles.skeletonSquare}`} />
+              <div className={`${styles.legendSquare} ${styles.skeletonSquare}`} />
+              <div className={`${styles.legendSquare} ${styles.skeletonSquare}`} />
+            </div>
+            <span className={styles.legendText}>More</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 

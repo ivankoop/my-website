@@ -177,6 +177,51 @@
   line-height: 15px;
 }
 
+/* Skeleton loader styles */
+.skeletonText {
+  height: 12px;
+  width: 150px;
+  background: var(--tag-bg-color);
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.skeletonMonth {
+  height: 8px;
+  width: 8px;
+  background: var(--tag-bg-color);
+  border-radius: 2px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.skeletonDay {
+  background: var(--tag-bg-color) !important;
+  border: 1px solid var(--divider-bg-color) !important;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.skeletonUpdated {
+  height: 10px;
+  width: 120px;
+  background: var(--tag-bg-color);
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.skeletonSquare {
+  background: var(--tag-bg-color) !important;
+  animation: skeleton-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 767px) {
   .gitStatsRoot {
@@ -257,5 +302,21 @@
   
   .disclaimerText {
     font-size: 0.6rem;
+  }
+  
+  /* Mobile skeleton adjustments */
+  .skeletonText {
+    width: 120px;
+    height: 10px;
+  }
+  
+  .skeletonMonth {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .skeletonUpdated {
+    width: 100px;
+    height: 8px;
   }
 }
