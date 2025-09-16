@@ -1,3 +1,3 @@
 export default function getBaseUrl() {
-  return window.location.href;
+  return window.location.origin;
 }
