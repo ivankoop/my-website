@@ -1,12 +1,12 @@
 export const experiences = [
   {
     description:
-      '<ul><li>Architected and built the entire frontend for Tabrasa One, a mortgage CRM platform, from the ground up using <a target="_blank" href="https://reactjs.org/">React</a> and <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> — including its mobile application</li><li>Designed and developed a custom design system adopted across all Tabrasa applications, enabling consistent UI and accelerating feature delivery company-wide</li><li>Built both the web platform and mobile app for Tabrasa One, delivering a cohesive cross-platform experience</li><li>Introduced visual regression testing, reducing UI bugs and improving release confidence</li><li>Partnered with designers and product managers to streamline workflows, driving faster iteration and higher development velocity across the team</li></ul>',
+      '<ul><li>As Front End Lead, I architected and built the entire frontend for Tabrasa One, a mortgage CRM platform, from the ground up using <a target="_blank" href="https://reactjs.org/">React</a> and <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> — including its mobile application</li><li>Designed and developed a custom design system adopted across all Tabrasa applications, enabling consistent UI and accelerating feature delivery company-wide</li><li>Built both the web platform and mobile app for Tabrasa One, delivering a cohesive cross-platform experience</li><li>Introduced visual regression testing, reducing UI bugs and improving release confidence</li><li>Partnered with designers and product managers to streamline workflows, driving faster iteration and higher development velocity across the team</li></ul>',
     logo: '/images/tabrasa-logo.jpeg',
     order: 1,
     time: 'Jan 2025 - Present',
     location: 'New Jersey, United States · Remote',
-    title: 'Front End Lead at Tabrasa',
+    title: 'Tabrasa LLC',
     tags: [
       'typescript',
       'react',
