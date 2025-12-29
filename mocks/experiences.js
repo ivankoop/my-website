@@ -1,10 +1,30 @@
 export const experiences = [
   {
     description:
+      '<ul><li>Architected and built the entire frontend for Tabrasa One, a mortgage CRM platform, from the ground up using <a target="_blank" href="https://reactjs.org/">React</a> and <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a> — including its mobile application</li><li>Designed and developed a custom design system adopted across all Tabrasa applications, enabling consistent UI and accelerating feature delivery company-wide</li><li>Built both the web platform and mobile app for Tabrasa One, delivering a cohesive cross-platform experience</li><li>Introduced visual regression testing, reducing UI bugs and improving release confidence</li><li>Partnered with designers and product managers to streamline workflows, driving faster iteration and higher development velocity across the team</li></ul>',
+    logo: '/images/tabrasa-logo.jpeg',
+    order: 1,
+    time: 'Jan 2025 - Present',
+    location: 'New Jersey, United States · Remote',
+    title: 'Front End Lead at Tabrasa',
+    tags: [
+      'typescript',
+      'react',
+      'ionic',
+      'capacitorjs',
+      'design-systems',
+      'visual-regression-testing',
+      'mobile',
+      'crm',
+    ],
+  },
+  {
+    description:
       '<ul><li>Led the front-end development of a new product, architecting and structuring the entire front-end using <a target="_blank" href="https://reactjs.org/">ReactJS</a></li><li>Implemented best practices in ReactJS to ensure maintainability, scalability, and performance</li><li>Developed a comprehensive design system adopted across six different projects, significantly enhancing development efficiency and reducing bugs</li><li>Collaborated closely with cross-functional teams to ensure seamless integration of front-end components with back-end services</li><li>Provided mentorship and guidance to junior developers, fostering a culture of continuous improvement and innovation</li></ul><h4>Personal Projects</h4><ul><li>Tiempo Fitness (WatchOS Application): Independently developed a WatchOS application for tracking workouts, focusing on user experience and functionality. More information available at <a target="_blank" href="https://www.tiempo.fitness/">Tiempo Fitness</a></li></ul>',
     logo: '/images/tiempo-icon.jpeg',
-    order: 1,
-    time: 'Since Jun 2023',
+    order: 2,
+    time: 'Jun 2023 - Present',
+    location: 'United States · Remote',
     title: 'Senior Full Stack Contractor',
     tags: [
       'typescript',
@@ -22,8 +42,9 @@ export const experiences = [
     description:
       '<ul><li>Led a remote team, ensuring smooth collaboration and high-quality code</li><li>Wrote detailed product technical documentation to aid clear communication and understanding</li><li>Worked closely with other engineers on code reviews, API documentation, and front-end/back-end testing</li><li>Set up projects on <a target="_blank" href="https://aws.amazon.com/">AWS</a> and <a target="_blank" href="https://www.heroku.com/">Heroku</a> using <a target="_blank" href="https://www.terraform.io/">Terraform</a></li><li>Provided front-end consulting to fintech companies, creating design systems for large enterprise projects</li></ul>',
     logo: '/images/clearsummit-logo.png',
-    order: 2,
+    order: 3,
     time: 'May 2021 – Jun 2023',
+    location: 'Los Angeles, California, United States · Remote',
     title: 'Clearsummit LLC',
     tags: [
       'typescript',
@@ -42,8 +63,9 @@ export const experiences = [
     description:
       '<ul><li>Worked as a full-stack developer on an Agile remote team, handling multiple projects at once</li><li>Developed front-end features using <a target="_blank" href="https://reactjs.org/">React</a>, back-end services with <a target="_blank" href="https://www.python.org/">Python</a>/<a target="_blank" href="https://www.djangoproject.com/">Django</a>, and mobile applications for <a target="_blank" href="https://www.android.com/">Android</a> and <a target="_blank" href="https://www.apple.com/ios/">iOS</a></li><li>Refactored main modules of a legacy React app to improve performance and maintainability</li><li>Participated in weekly Scrum meetings and communicated daily with product owners, designers, and other developers</li><li>Performed code reviews, wrote API documentation, and conducted front-end and back-end testing</li></ul>',
     logo: '/images/silverlogic-logo.jpeg',
-    order: 3,
+    order: 4,
     time: 'Oct 2019 – May 2021',
+    location: 'Miami, Florida, United States · Remote',
     title: 'The SilverLogic LLC',
     tags: [
       'python',
@@ -64,8 +86,9 @@ export const experiences = [
     description:
       '<ul><li>Led the front-end development for all management software in the company</li><li>Designed the front-end architecture and core foundation</li><li>Introduced unit and integration tests, as well as continuous integration practices</li><li>Worked with backend microservices using <a target="_blank" href="https://nodejs.org/en/">Node.js</a>, <a target="_blank" href="https://www.mongodb.com/">MongoDB</a>, and <a target="_blank" href="https://kafka.apache.org/">Apache Kafka</a></li></ul>',
     logo: '/images/muv-logo.png',
-    order: 4,
+    order: 5,
     time: 'February 2019 - October 2019',
+    location: 'Asunción, Paraguay',
     title: 'MUV',
     tags: [
       'nodejs',
@@ -91,8 +114,9 @@ export const experiences = [
     description:
       '<ul><li>Integrated <a target="_blank" href="https://reactjs.org/">ReactJS</a> into a registration form for the MUV App</li><li>Served as a mentor at a coding boot camp for <a target="_blank" href="https://penguin.academy/">Penguin Academy</a>, a Swiss company</li><li>Developed a full-stack e-commerce website using <a target="_blank" href="https://codeigniter.com/">CodeIgniter</a> and <a target="_blank" href="https://reactjs.org/">ReactJS</a>, with <a target="_blank" href="https://expressionengine.com/">Expression Engine</a> as the CMS (Tobiano)</li><li>Integrated credit card purchases for a local e-commerce website (<a target="_blank" href="https://mercadomovil.com.py/">Mercado Movil</a>)</li><li>Developed a full-stack website for a loan company using <a target="_blank" href="https://laravel.com/">Laravel</a></li></ul>',
     logo: '/images/freelance-logo.png',
-    order: 5,
+    order: 6,
     time: 'July 2018 – February 2019',
+    location: 'Asunción, Paraguay',
     title: 'Full Stack Contractor',
     tags: [
       'php',
@@ -111,8 +135,9 @@ export const experiences = [
     description:
       '<ul><li>Full stack and mobile development for Vision Banco S.A.E.C.A., working on Android and iOS apps, and the website frontend using CodeIgniter and AngularJS</li><li>Led the full stack and mobile development of a news media website (HOY), driving the adoption of ReactJS for the website</li></ul>',
     logo: '/images/teixido-logo.png',
-    order: 6,
+    order: 7,
     time: 'June 2016 – July 2018',
+    location: 'Asunción, Paraguay',
     title: 'Teixido & Co',
     tags: [
       'php',
@@ -134,8 +159,9 @@ export const experiences = [
     description:
       '<ul><li>Created a platform for a mechanical company using Ajax, PHP, and MySQL</li><li>Developed small 2D HTML5 video games using Phaser.io</li></ul>',
     logo: '/images/freelance-logo.png',
-    order: 7,
+    order: 8,
     time: 'October 2015 – July 2016',
+    location: 'Asunción, Paraguay',
     title: 'Freelance Fullstack developer',
     tags: ['php', 'mysql', 'jquery', 'ajax', 'phaserjs', 'android', 'java'],
   },
@@ -143,8 +169,9 @@ export const experiences = [
     description:
       '<ul><li>First job as a developer</li><li>Worked with PHP and jQuery to create small landing sites with a custom CMS powered by pure PHP and MySQL</li><li>Began mobile development using the Sencha Touch framework</li></ul>',
     logo: '/images/noollab-logo.png',
-    order: 8,
+    order: 9,
     time: 'February 2015 – October 2015',
+    location: 'Asunción, Paraguay',
     title: 'Noollab',
     tags: ['mysql', 'php', 'sencha', 'extjs', 'jquery'],
   },

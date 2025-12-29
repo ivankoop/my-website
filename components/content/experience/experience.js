@@ -10,6 +10,7 @@ export default function Experience(props) {
         <div className={styles.titleColumn}>
           <h2>{data?.title}</h2>
           <p className="date-text">{data?.time}</p>
+          {data?.location && <p className={styles.location}>{data?.location}</p>}
         </div>
       </div>
       <div
