@@ -31,6 +31,19 @@
     opacity: 1;
 }
 
+/* Scroll-reveal for experience cards (applied by IntersectionObserver in
+   content.js; only added when motion is allowed, so default is visible) */
+.revealPending {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.revealed {
+    opacity: 1;
+    transform: none;
+}
+
 
 /* Mobile - natural height and no overflow restrictions */
 @media (max-width: 767px) {
@@ -100,6 +113,26 @@
 
     .responsiveExperiences {
         margin-top: 20px;
+    }
+}
+
+/* Print: let the main column flow across pages instead of clipping to 100vh,
+   and make sure scroll-revealed cards are always visible on paper */
+@media print {
+    .contentRoot {
+        height: auto !important;
+        overflow: visible !important;
+        flex: 1 1 auto !important;
+        padding: 0 !important;
+    }
+
+    .scrollShadow {
+        display: none !important;
+    }
+
+    .revealPending {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 

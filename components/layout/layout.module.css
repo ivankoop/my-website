@@ -40,3 +40,13 @@
         max-width: 1280px;
     }
 }
+
+@media print {
+    /* Only unclip the columns; keep the natural direction (row on wide paper,
+       column on narrow paper) so content is never duplicated */
+    .container {
+        height: auto !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+    }
+}

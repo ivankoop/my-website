@@ -1,12 +1,104 @@
 import React from 'react';
 import Head from 'next/head';
 
-export const siteTitle = 'Ivan Koop / Full Stack Developer';
+export const siteTitle = 'Ivan Koop — Senior Full Stack Developer';
+const siteUrl = 'https://ivankoop.dev/';
+const siteDescription =
+  'Ivan Koop — Senior Full Stack Developer with 10+ years building React, TypeScript, and React Native products and design systems.';
+const ogImage = `${siteUrl}og-image.png`;
+
+// Static Person structured data. All values are build-time constants sourced
+// from the site's own content (social links, current role, skills).
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ivan Koop',
+  jobTitle: 'Senior Full Stack Developer',
+  description: siteDescription,
+  url: siteUrl,
+  image: `${siteUrl}images/profile-picture.jpg`,
+  sameAs: [
+    'https://www.linkedin.com/in/ivankoop/',
+    'https://github.com/ivankoop',
+    'https://medium.com/@ivankoop',
+    'https://www.youtube.com/@ivankoop1915',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Tabrasa LLC',
+  },
+  knowsAbout: [
+    'ReactJS',
+    'React Native',
+    'TypeScript',
+    'Django',
+    'Node.js',
+    'SQL',
+    'Swift',
+    'CI/CD',
+    'Terraform',
+    'Design Systems',
+  ],
+};
 
 export default function Header() {
   return (
     <Head>
       <title>{siteTitle}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content={siteDescription} />
+      <link rel="canonical" href={siteUrl} />
+
+      {/* Open Graph — note: property=, not name= (the previous name="og:title"
+          was ignored by every scraper) */}
+      <meta property="og:type" content="profile" />
+      <meta property="og:site_name" content="Ivan Koop" />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={siteDescription} />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content="Ivan Koop — Senior Full Stack Developer"
+      />
+
+      {/* Twitter card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:image" content={ogImage} />
+
+      {/* Theme color follows the active system theme */}
+      <meta
+        name="theme-color"
+        content="#ffffff"
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content="#1a1a1a"
+        media="(prefers-color-scheme: dark)"
+      />
+
+      {/* Preload the fonts that render above the fold to avoid a heading FOUT */}
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        href="/font/JetBrainsMono-Regular.woff2"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        href="/font/JetBrainsMono-Bold.woff2"
+        crossOrigin="anonymous"
+      />
+
+      {/* Favicons */}
       <link
         rel="apple-touch-icon"
         sizes="57x57"
@@ -82,23 +174,12 @@ export default function Header() {
         name="msapplication-TileImage"
         content="/favicon/ms-icon-144x144.png"
       />
-      <meta name="theme-color" content="#ffffff" />
-      <meta
-        name="description"
-        content="Full Stack Developer, Experienced with a wide range of frontend and backend technologies,
-          specialized on Frontend development."
-      />
-      {/* TODO: find this */}
-      {/* <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        /> */}
-      <meta name="og:title" content={siteTitle} />
-      <meta name="twitter:card" content="summary_large_image" />
 
-      <script async src="https://cdn.splitbee.io/sb.js"></script>
+      {/* Person structured data for rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
     </Head>
   );
 }

@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className={`${styles.themeToggle} ${isDarkMode ? styles.dark : styles.light}`}
+      className={`${styles.themeToggle} ${isDarkMode ? styles.dark : styles.light} no-print`}
       aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
     >
       {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}

@@ -13,6 +13,49 @@ export default function Content(props) {
   const contentRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollTimeoutRef = useRef(null);
+  const revealRefs = useRef([]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const items = revealRefs.current.filter(Boolean);
+    if (!items.length) return;
+
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    // No JS-driven reveal for reduced-motion users or unsupported browsers:
+    // cards stay visible (also keeps print output intact).
+    if (prefersReduced || !('IntersectionObserver' in window)) return;
+
+    items.forEach((el) => el.classList.add(styles.revealPending));
+
+    const reveal = (el) => el.classList.add(styles.revealed);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+    );
+
+    // Safety net: anything already in or above the viewport (e.g. on reload
+    // with a restored scroll position) is revealed immediately so a card can
+    // never get stuck invisible. Only genuinely below-the-fold cards animate in.
+    items.forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        reveal(el);
+      } else {
+        observer.observe(el);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +106,12 @@ export default function Content(props) {
 
       <div id="experiences" className={styles.responsiveExperiences}>
         {experiences.map((experience, index) => (
-          <div key={`experience-${index}`}>
+          <div
+            key={`experience-${index}`}
+            ref={(el) => {
+              revealRefs.current[index] = el;
+            }}
+          >
             <Experience data={experience} isLast={index === experiences.length - 1} />
           </div>
         ))}

@@ -1,5 +1,6 @@
-module.exports = {
-  publicRuntimeConfig: {
-    WEBSITE_BASE_URL: process.env.WEBSITE_BASE_URL,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
 };
+
+module.exports = nextConfig;

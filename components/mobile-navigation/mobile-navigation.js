@@ -50,7 +50,7 @@ export default function MobileNavigation() {
   }, []);
 
   return (
-    <div className={styles.mobileNavigation}>
+    <div className={`${styles.mobileNavigation} no-print`}>
       <div className={styles.navContent}>
         <div className={styles.leftSection}>
           <button className={styles.brandName} onClick={scrollToTop}>

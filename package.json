@@ -10,27 +10,20 @@
     "upload-git-stats": "node scripts/upload-git-stats.js"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.842.0",
-    "axios": "^1.7.0",
-    "concurrently": "^8.2.0",
-    "cookie": "^0.6.0",
-    "date-fns": "^3.6.0",
+    "@aws-sdk/client-s3": "^3.1088.0",
+    "axios": "^1.18.1",
+    "cookie": "^1.1.1",
     "eslint": "^8.57.0",
     "git-stats": "^3.2.1",
-    "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
-    "lucide-react": "^0.525.0",
-    "next": "15.1.9",
-    "next-absolute-url": "^1.2.2",
-    "prettier": "^3.2.0",
-    "react": "^18.2.0",
-    "react-content-loader": "^7.0.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.51.0",
-    "react-tooltip": "^5.26.0",
-    "remark": "^15.0.0",
-    "remark-html": "^16.0.0",
-    "swr": "^2.2.0"
+    "lucide-react": "^1.24.0",
+    "next": "16.2.10",
+    "prettier": "^3.9.5",
+    "react": "^19.2.0",
+    "react-content-loader": "^7.1.2",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.81.0",
+    "swr": "^2.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
@@ -40,6 +33,6 @@
     "style-loader": "^4.0.0"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=20.9.0"
   }
 }

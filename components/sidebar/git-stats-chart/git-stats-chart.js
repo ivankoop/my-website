@@ -101,25 +101,27 @@ export function GitStatsChart() {
           <div className={styles.skeletonText}></div>
         </div>
         
-        <div className={styles.monthLabels}>
-          {Array.from({ length: 26 }, (_, i) => (
-            <div key={i} className={styles.monthLabel}>
-              {i % 4 === 0 ? <div className={styles.skeletonMonth}></div> : ''}
-            </div>
-          ))}
-        </div>
-        
-        <div className={styles.contributionChart}>
-          {Array.from({ length: 26 }, (_, weekIndex) => (
-            <div key={weekIndex} className={styles.week}>
-              {Array.from({ length: 7 }, (_, dayIndex) => (
-                <div
-                  key={`${weekIndex}-${dayIndex}`}
-                  className={`${styles.day} ${styles.skeletonDay}`}
-                />
-              ))}
-            </div>
-          ))}
+        <div className={styles.chartScroller}>
+          <div className={styles.monthLabels}>
+            {Array.from({ length: 26 }, (_, i) => (
+              <div key={i} className={styles.monthLabel}>
+                {i % 4 === 0 ? <div className={styles.skeletonMonth}></div> : ''}
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.contributionChart}>
+            {Array.from({ length: 26 }, (_, weekIndex) => (
+              <div key={weekIndex} className={styles.week}>
+                {Array.from({ length: 7 }, (_, dayIndex) => (
+                  <div
+                    key={`${weekIndex}-${dayIndex}`}
+                    className={`${styles.day} ${styles.skeletonDay}`}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className={styles.legend}>
@@ -159,26 +161,28 @@ export function GitStatsChart() {
           </span>
         </div>
         
-        <div className={styles.monthLabels}>
-          {monthLabels && monthLabels.map((monthLabel, index) => (
-            <div key={index} className={styles.monthLabel}>
-              {monthLabel ? monthLabel.month : ''}
-            </div>
-          ))}
-        </div>
-        
-        <div className={styles.contributionChart}>
-          {weeks && weeks.map((week, weekIndex) => (
-            <div key={weekIndex} className={styles.week}>
-              {week && week.map((day, dayIndex) => (
-                <div
-                  key={`${weekIndex}-${dayIndex}`}
-                  className={`${styles.day} ${styles[`level${day.level}`]}`}
-                  title={`${day.dayOfWeek}, ${day.date}: ${day.commits} commits`}
-                />
-              ))}
-            </div>
-          ))}
+        <div className={styles.chartScroller}>
+          <div className={styles.monthLabels}>
+            {monthLabels && monthLabels.map((monthLabel, index) => (
+              <div key={index} className={styles.monthLabel}>
+                {monthLabel ? monthLabel.month : ''}
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.contributionChart}>
+            {weeks && weeks.map((week, weekIndex) => (
+              <div key={weekIndex} className={styles.week}>
+                {week && week.map((day, dayIndex) => (
+                  <div
+                    key={`${weekIndex}-${dayIndex}`}
+                    className={`${styles.day} ${styles[`level${day.level}`]}`}
+                    title={`${day.dayOfWeek}, ${day.date}: ${day.commits} commits`}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className={styles.legend}>

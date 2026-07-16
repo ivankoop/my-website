@@ -1,38 +1,15 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
+
+// Runs before first paint to set the theme from the system preference, so
+// dark-mode visitors never see a flash of the light palette (the values live
+// in styles/global.css keyed off [data-theme]).
+const noFlashTheme = `(function(){try{var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',d?'dark':'light');}catch(e){}})();`
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
-        {/* Meta Pixel Code */}
-        <Script
-          id="fb-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1174921337799317');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1174921337799317&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
+        <script dangerouslySetInnerHTML={{ __html: noFlashTheme }} />
       </Head>
       <body>
         <Main />

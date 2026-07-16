@@ -10,54 +10,42 @@ export const useTheme = () => {
   return context;
 };
 
+const applyTheme = (isDark) => {
+  if (typeof document === 'undefined') return;
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+};
+
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Only run on client side (not during SSR)
     if (typeof window === 'undefined') return;
 
-    // Always use system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDark);
-
-    // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleSystemThemeChange = (e) => {
-      setIsDarkMode(e.matches);
+
+    // Sync both React state and the data-theme attribute to the *actual*
+    // preference. We apply the true value directly (rather than via a
+    // [isDarkMode]-dependent effect) so we never momentarily clobber the theme
+    // the pre-paint inline script in _document already set — which would flash
+    // the light palette for dark-mode visitors.
+    const sync = (isDark) => {
+      setIsDarkMode(isDark);
+      applyTheme(isDark);
     };
 
+    sync(mediaQuery.matches);
+
+    const handleSystemThemeChange = (e) => sync(e.matches);
     mediaQuery.addEventListener('change', handleSystemThemeChange);
-    
-    // Cleanup listener
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemThemeChange);
-    };
+    return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
   }, []);
 
-  useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined') return;
-    
-    // Update CSS custom properties when theme changes
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.style.setProperty('--text-color', '#a8b4d1');
-      root.style.setProperty('--bg-color', '#1a1a1a');
-      root.style.setProperty('--tag-bg-color', 'rgba(212, 220, 241, 0.1)');
-      root.style.setProperty('--progress-bg-color', 'rgba(212, 220, 241, 0.1)');
-      root.style.setProperty('--divider-bg-color', 'rgba(212, 220, 241, 0.2)');
-    } else {
-      root.style.setProperty('--text-color', '#52648e');
-      root.style.setProperty('--bg-color', '#ffffff');
-      root.style.setProperty('--tag-bg-color', 'rgba(212, 220, 241, 0.3)');
-      root.style.setProperty('--progress-bg-color', '#e5e7eb');
-      root.style.setProperty('--divider-bg-color', 'rgba(212, 220, 241, 0.4)');
-    }
-  }, [isDarkMode]);
-
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      applyTheme(next);
+      return next;
+    });
   };
 
   return (

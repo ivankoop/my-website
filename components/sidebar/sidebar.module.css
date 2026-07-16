@@ -34,3 +34,22 @@
         display: none;
     }
 }
+
+@media print {
+    /* Do NOT force the sidebar visible: at typical print width the mobile
+       single-column layout already shows everything in the content column, so
+       forcing it here would duplicate the whole resume. These only unclip the
+       column for wide-paper prints where the sidebar is naturally shown. */
+    .sidebarContainer {
+        height: auto !important;
+    }
+
+    .sidebarRoot {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .sideBarDivider {
+        display: none !important;
+    }
+}

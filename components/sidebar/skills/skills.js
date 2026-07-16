@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './skills.module.css';
 
 const skills = [
@@ -41,8 +41,42 @@ const skills = [
 ];
 
 export default function Skills() {
+  const rootRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    // Reduced-motion or unsupported browsers: show final values immediately.
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      setInView(true);
+      return;
+    }
+
+    const el = rootRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.2 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className={styles.skillsRoot}>
+    <div className={styles.skillsRoot} ref={rootRef}>
       <h2 className={styles.title}>Skills</h2>
       {skills.map((skill, index) => (
         <div key={`skill-${index}`} className={styles.skillItem}>
@@ -51,9 +85,12 @@ export default function Skills() {
             <span className={`${styles.skillPercentage} skill-name`}>{skill.percentage}%</span>
           </div>
           <div className={styles.progressBarContainer}>
-            <div 
+            <div
               className={styles.progressBar}
-              style={{ width: `${skill.percentage}%` }}
+              style={{
+                width: inView ? `${skill.percentage}%` : '0%',
+                transitionDelay: `${index * 60}ms`,
+              }}
             ></div>
           </div>
         </div>

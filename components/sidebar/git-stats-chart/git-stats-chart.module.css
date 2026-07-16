@@ -18,12 +18,19 @@
   align-items: flex-end;
 }
 
+.chartScroller {
+  max-width: 100%;
+  overflow-x: auto;
+  align-self: stretch;
+}
+
 .monthLabels {
   display: flex;
   gap: 2px;
   padding: 0 0.5rem;
   align-items: center;
   height: 12px;
+  width: max-content;
 }
 
 .monthLabel {
@@ -37,7 +44,7 @@
 .contributionChart {
   display: flex;
   gap: 2px;
-  overflow-x: auto;
+  width: max-content;
   padding: 0.5rem;
   background: var(--bg-secondary);
   border-radius: 6px;
@@ -58,8 +65,8 @@
 }
 
 .day:hover {
-  transform: scale(1.1);
-  border: 1px solid var(--text-primary);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 1px var(--text-color);
 }
 
 /* Activity levels using CSS variables for dynamic theme switching */
@@ -250,15 +257,14 @@
   .contributionChart {
     gap: 2px;
     padding: 0.5rem;
-    width: 100%;
+    width: max-content;
     box-sizing: border-box;
   }
-  
+
   .week {
     gap: 2px;
-    flex: 1;
   }
-  
+
   .day {
     width: 10px;
     height: 10px;

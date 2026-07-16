@@ -3,7 +3,7 @@
     margin-bottom: 20px;
     border-radius: 20px;
     padding: 20px;
-    
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .experienceRoot a {
@@ -16,7 +16,17 @@
 }
 
 .experienceRoot:hover {
-    box-shadow: 0 93px 114px -12px rgba(115, 131, 169, 0.1);
+    box-shadow: 0 12px 28px -12px rgba(115, 131, 169, 0.25);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .experienceRoot:hover {
+        transform: translateY(-2px);
+    }
+
+    .experienceRoot:hover .image {
+        transform: scale(1.05) rotate(-1deg);
+    }
 }
 
 .experienceRoot .topRow {
@@ -53,7 +63,9 @@
 
 .experienceRoot .image {
     height: 55px;
+    width: auto;
     border-radius: 5px;
+    transition: transform 0.25s ease;
 }
 
 .experienceRoot .description {
@@ -82,14 +94,40 @@
     font-size: 0.7rem;
     font-style: italic;
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease,
+        box-shadow 0.2s ease, color 0.2s ease;
 }
 
 
 
 .experienceRoot .tagContainer .tagItem:hover {
     background-color: #0083ff;
-    box-shadow: 0 14px 24px 0 rgba(39, 158, 255, 0.2);
+    box-shadow: 0 10px 20px 0 rgba(39, 158, 255, 0.2);
     color: white;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .experienceRoot .tagContainer .tagItem:hover {
+        transform: translateY(-1px);
+    }
+}
+
+/* Print: keep each role on one page and expose link targets */
+@media print {
+    .experienceRoot {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        padding: 8px 0 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .experienceRoot a[href^='http']::after {
+        content: ' (' attr(href) ')';
+        font-size: 0.75em;
+        color: #444444;
+        word-break: break-all;
+    }
 }
 
 @media (max-width: 767px) {

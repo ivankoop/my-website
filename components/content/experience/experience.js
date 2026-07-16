@@ -6,7 +6,13 @@ export default function Experience(props) {
   return (
     <div className={`${styles.experienceRoot} ${isLast ? styles.lastExperience : ''}`}>
       <div className={styles.topRow}>
-        <img className={styles.image} src={data?.logo}></img>
+        <img
+          className={styles.image}
+          src={data?.logo}
+          alt={data?.title ? `${data.title} logo` : ''}
+          height="55"
+          loading="lazy"
+        />
         <div className={styles.titleColumn}>
           <h2>{data?.title}</h2>
           <p className="date-text">{data?.time}</p>

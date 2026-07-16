@@ -49,10 +49,29 @@
   font-display: swap;
 }
 
-:root {
+:root,
+:root[data-theme='light'] {
   --text-color: #52648e;
+  --text-primary: #2d3a5c;
+  --text-secondary: #7683a6;
   --bg-color: #ffffff;
+  --bg-secondary: rgba(212, 220, 241, 0.15);
   --tag-bg-color: rgba(212, 220, 241, 0.3);
+  --progress-bg-color: #e5e7eb;
+  --divider-bg-color: rgba(212, 220, 241, 0.4);
+  --accent: #0083ff;
+}
+
+:root[data-theme='dark'] {
+  --text-color: #a8b4d1;
+  --text-primary: #d4dcf1;
+  --text-secondary: #8a97b8;
+  --bg-color: #1a1a1a;
+  --bg-secondary: rgba(212, 220, 241, 0.05);
+  --tag-bg-color: rgba(212, 220, 241, 0.1);
+  --progress-bg-color: rgba(212, 220, 241, 0.1);
+  --divider-bg-color: rgba(212, 220, 241, 0.2);
+  --accent: #0083ff;
 }
 
 html,
@@ -191,4 +210,67 @@ h1, h2, h3, h4, h5, h6 {
 *[class*="title"]:not(.subtitle),
 .headerTitlesRoot .title {
   line-height: 1.1 !important;
+}
+
+/* Accessibility: visible keyboard focus ring that works on light and dark */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Mouse users keep the original clean look (no ring on click) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Respect users who prefer reduced motion: neutralize non-essential animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print / Save-as-PDF: turn the two scrolling columns into a clean one-page resume */
+@media print {
+  html,
+  body {
+    overflow: visible !important;
+    height: auto !important;
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    font-size: 12px;
+  }
+
+  /* Force a light, ink-friendly palette regardless of the on-screen theme */
+  :root,
+  :root[data-theme='dark'],
+  :root[data-theme='light'] {
+    --text-color: #1a1a1a;
+    --text-primary: #000000;
+    --text-secondary: #444444;
+    --bg-color: #ffffff;
+    --bg-secondary: #f4f6fb;
+    --tag-bg-color: #eef1f8;
+    --progress-bg-color: #e5e7eb;
+    --divider-bg-color: #cccccc;
+    --accent: #0056b3;
+  }
+
+  /* Keep accent colors and tag fills when printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive chrome that has no meaning on paper.
+     `no-print` is a plain global class added alongside module classes. */
+  .no-print {
+    display: none !important;
+  }
 }
